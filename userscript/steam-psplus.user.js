@@ -2,7 +2,7 @@
 // @name         Steam × PS Plus 会免游戏显示
 // @icon         https://store.steampowered.com/favicon.ico
 // @namespace    https://github.com/oXnMe/psplus-steam-overlay
-// @version      1.1.7
+// @version      1.1.8
 // @description  在 Steam 显示 PS Plus 会免/入库状态。
 // @author       oXnMe
 // @license      MIT
@@ -325,11 +325,17 @@ function appIdFromNode(node) {
   return m ? m[1] : null;
 }
 
-function renderCardBadge(node, matches) {
-  if (node.classList.contains("psplus-checked") && node.querySelector(".psplus-badge")) {
-    return;
-  }
-  node.classList.add("psplus-checked");
+function renderCardBadge(node, appId, matches) {
+  const prev = node.getAttribute("data-psplus-appid");
+  const hasBadges = !!node.querySelector(".psplus-badge");
+  const wantBadges = matches.length > 0;
+  if (prev === appId && hasBadges === wantBadges) return;
+
+  node.querySelectorAll(".psplus-badge").forEach(function (b) {
+    b.remove();
+  });
+  node.setAttribute("data-psplus-appid", appId);
+  if (!wantBadges) return;
 
   if (window.getComputedStyle(node).position === "static") {
     node.style.position = "relative";
@@ -363,9 +369,9 @@ function renderCardBadge(node, matches) {
 }
 
 const CARD_SELECTOR = [
-  "[data-ds-appid]:not(.psplus-checked)",
-  "a.match:not(.psplus-checked)",
-  '[id^="searchSuggestions"] a[href*="/app/"]:not(.psplus-checked)',
+  "[data-ds-appid]",
+  "a.match",
+  '[id^="searchSuggestions"] a[href*="/app/"]',
 ].join(", ");
 
 function scanCards(appMap) {
@@ -375,34 +381,17 @@ function scanCards(appMap) {
     .forEach(function (node) {
       const appId = appIdFromNode(node);
       if (!appId || appId === pageAppId) return;
-      const matches = appMap[appId] || [];
-      if (!matches.length) return;
-      renderCardBadge(node, matches);
+      renderCardBadge(node, appId, appMap[appId] || []);
     });
 
   if (location.pathname.indexOf("/wishlist/") === 0) {
     document
-      .querySelectorAll('a[href*="/app/"]:not(.psplus-checked)')
+      .querySelectorAll('a[href*="/app/"]')
       .forEach(function (a) {
         if (!a.querySelector("img")) return;
         const m = /\/app\/(\d+)/.exec(a.getAttribute("href") || "");
         if (!m) return;
-        const matches = appMap[m[1]] || [];
-        if (!matches.length) return;
-        renderCardBadge(a, matches);
-      });
-    document
-      .querySelectorAll('[data-rfd-draggable-id^="WishlistItem-"]:not(.psplus-checked)')
-      .forEach(function (row) {
-        if (row.querySelector(".psplus-badge")) {
-          row.classList.add("psplus-checked");
-          return;
-        }
-        const m = /^WishlistItem-(\d+)-/.exec(row.getAttribute("data-rfd-draggable-id") || "");
-        if (!m) return;
-        const matches = appMap[m[1]] || [];
-        if (!matches.length) return;
-        renderCardBadge(row, matches);
+        renderCardBadge(a, m[1], appMap[m[1]] || []);
       });
   }
 }
