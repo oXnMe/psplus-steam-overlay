@@ -1,0 +1,74 @@
+name: Sync Feishu PS Plus data
+
+on:
+  schedule:
+    # Daily at 16:30 UTC (= 00:30 Beijing Time).
+    - cron: "30 16 * * *"
+  workflow_dispatch:
+    inputs:
+      delay:
+        description: "Minimum seconds between Steam requests"
+        required: false
+        default: "1.0"
+      retries:
+        description: "Max retries on Steam 429/5xx"
+        required: false
+        default: "4"
+      seed_csv:
+        description: "Proofread mapping CSV path (recordId,steamAppId)"
+        required: false
+        default: "data/data.csv"
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: sync-feishu
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run Feishu -> JSON sync
+        env:
+          FEISHU_APP_ID: ${{ secrets.FEISHU_APP_ID }}
+          FEISHU_APP_SECRET: ${{ secrets.FEISHU_APP_SECRET }}
+          FEISHU_APP_TOKEN: ${{ secrets.FEISHU_APP_TOKEN }}
+          FEISHU_TABLE_IDS: ${{ secrets.FEISHU_TABLE_ID || secrets.FEISHU_TABLE_IDS }}
+        run: |
+          python3 scripts/sync_feishu.py \
+            --seed-csv "${{ github.event.inputs.seed_csv || 'data/data.csv' }}" \
+            --delay "${{ github.event.inputs.delay || '1.0' }}" \
+            --retries "${{ github.event.inputs.retries || '4' }}"
+
+      - name: Commit refreshed data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/psplus-games.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: sync PS Plus data $(date -u +%Y-%m-%d)"
+            git push
+          fi
+
+      - name: Remove old workflow runs
+        uses: ophub/delete-releases-workflows@main
+        with:
+          delete_workflows: true
+          workflows_keep_day: 3
+          gh_token: ${{ secrets.GITHUB_TOKEN }}
