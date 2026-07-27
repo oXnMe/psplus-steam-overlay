@@ -2196,7 +2196,7 @@
     },
     {
       "recordId": "recv83nQgyzxwj",
-      "steamAppId": "2651280",
+      "steamAppId": "1817070",
       "tier": 2,
       "month": "2025年8月",
       "monthSort": "2025-08",
@@ -2260,7 +2260,7 @@
     },
     {
       "recordId": "recv83nQgywBr2",
-      "steamAppId": "3365050",
+      "steamAppId": null,
       "tier": 2,
       "month": "2025年8月",
       "monthSort": "2025-08",
@@ -12232,9 +12232,9 @@
       "tier": 2,
       "month": "2022年7月",
       "monthSort": "2022-07",
-      "statusName": "已出库",
-      "statusDisplay": "已出库",
-      "statusDate": "2024年5月21日",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2022年7月18日",
       "versions": [
         "PS4",
         "PS5"
