@@ -1,7 +1,53 @@
 {
-  "updatedAt": "2026-07-28T17:57:37Z",
-  "count": 1500,
+  "updatedAt": "2026-07-29T17:49:58Z",
+  "count": 1503,
   "games": [
+    {
+      "recordId": "recvqJjvjOkx7C",
+      "steamAppId": "534380",
+      "tier": 1,
+      "month": "2026年8月",
+      "monthSort": "2026-08",
+      "statusName": "即将会免",
+      "statusDisplay": "即将会免",
+      "statusDate": "2026年8月4日",
+      "versions": [
+        "PS4",
+        "PS5"
+      ],
+      "psstore": "https://www.playstation.com/zh-hans-hk/games/dying-light-2-stay-human/",
+      "color": 2
+    },
+    {
+      "recordId": "recvqJjvjO5atY",
+      "steamAppId": "1478500",
+      "tier": 1,
+      "month": "2026年8月",
+      "monthSort": "2026-08",
+      "statusName": "即将会免",
+      "statusDisplay": "即将会免",
+      "statusDate": "2026年8月4日",
+      "versions": [
+        "PS5"
+      ],
+      "psstore": "https://www.playstation.com/zh-hans-hk/games/big-walk/",
+      "color": 2
+    },
+    {
+      "recordId": "recvqJjvjOTT2q",
+      "steamAppId": "1262350",
+      "tier": 1,
+      "month": "2026年8月",
+      "monthSort": "2026-08",
+      "statusName": "即将会免",
+      "statusDisplay": "即将会免",
+      "statusDate": "2026年8月4日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://www.playstation.com/zh-hans-hk/games/signalis/",
+      "color": 2
+    },
     {
       "recordId": "recvpuYNKUeYc1",
       "steamAppId": null,
