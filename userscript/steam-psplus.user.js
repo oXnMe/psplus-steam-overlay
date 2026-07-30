@@ -2,7 +2,7 @@
 // @name         Steam × PS Plus 会免游戏显示
 // @icon         https://store.steampowered.com/favicon.ico
 // @namespace    https://github.com/oXnMe/psplus-steam-overlay
-// @version      1.1.8
+// @version      1.1.9
 // @description  在 Steam 显示 PS Plus 会免/入库状态。
 // @author       oXnMe
 // @license      MIT
@@ -260,13 +260,20 @@ function renderStoreBanners(appMap, subMap) {
       wrap.appendChild(makeBanner(bannerText(m), bannerDate(m), m.psstore));
     } else {
       const mergedText = sortedMatches.map(bannerText).join(" / ");
-      let mergedDate = "";
+      const parts = [];
+      let tier2PlusAdded = false;
       for (let i = 0; i < sortedMatches.length; i++) {
-        if (Number(sortedMatches[i].tier) >= 2) {
-          mergedDate = bannerDate(sortedMatches[i]);
-          if (mergedDate) break;
+        const m = sortedMatches[i];
+        const d = bannerDate(m);
+        if (!d) continue;
+        if (Number(m.tier) === 1) {
+          parts.push(d);
+        } else if (!tier2PlusAdded) {
+          parts.push(d);
+          tier2PlusAdded = true;
         }
       }
+      const mergedDate = parts.join(" / ");
       wrap.appendChild(makeBanner(mergedText, mergedDate, sortedMatches[0].psstore));
     }
 
