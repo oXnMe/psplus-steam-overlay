@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-03T18:18:13Z",
+  "updatedAt": "2026-08-04T18:12:02Z",
   "count": 1503,
   "games": [
     {
@@ -8,15 +8,15 @@
       "tier": 1,
       "month": "2026年8月",
       "monthSort": "2026-08",
-      "statusName": "即将会免",
-      "statusDisplay": "即将会免",
-      "statusDate": "2026年8月4日",
+      "statusName": "领取中",
+      "statusDisplay": "会免领取中",
+      "statusDate": "2026年9月1日",
       "versions": [
         "PS4",
         "PS5"
       ],
       "psstore": "https://store.playstation.com/zh-hant-hk/product/UP3050-PPSA02261_00-DL2GAME0000000US",
-      "color": 2
+      "color": 7
     },
     {
       "recordId": "recvqJjvjO5atY",
@@ -24,14 +24,14 @@
       "tier": 1,
       "month": "2026年8月",
       "monthSort": "2026-08",
-      "statusName": "即将会免",
-      "statusDisplay": "即将会免",
-      "statusDate": "2026年8月4日",
+      "statusName": "领取中",
+      "statusDisplay": "会免领取中",
+      "statusDate": "2026年9月1日",
       "versions": [
         "PS5"
       ],
       "psstore": "https://store.playstation.com/zh-hant-hk/concept/10017189",
-      "color": 2
+      "color": 7
     },
     {
       "recordId": "recvqJjvjOTT2q",
@@ -39,14 +39,14 @@
       "tier": 1,
       "month": "2026年8月",
       "monthSort": "2026-08",
-      "statusName": "即将会免",
-      "statusDisplay": "即将会免",
-      "statusDate": "2026年8月4日",
+      "statusName": "领取中",
+      "statusDisplay": "会免领取中",
+      "statusDate": "2026年9月1日",
       "versions": [
         "PS4"
       ],
       "psstore": "https://store.playstation.com/zh-hant-hk/product/UP3864-CUSA34422_00-SIGNALIS0000004A",
-      "color": 2
+      "color": 7
     },
     {
       "recordId": "recvpuYNKUeYc1",
