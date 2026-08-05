@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-04T18:12:02Z",
+  "updatedAt": "2026-08-05T18:06:49Z",
   "count": 1503,
   "games": [
     {
@@ -191,15 +191,15 @@
       "tier": 1,
       "month": "2026年7月",
       "monthSort": "2026-07",
-      "statusName": "领取中",
-      "statusDisplay": "会免领取中",
+      "statusName": "截止领取",
+      "statusDisplay": "会免过",
       "statusDate": "2026年8月4日",
       "versions": [
         "PS4",
         "PS5"
       ],
       "psstore": "https://www.playstation.com/zh-hans-hk/games/call-of-duty-modern-warfare-iii/",
-      "color": 7
+      "color": 5
     },
     {
       "recordId": "recvod9tLMaptT",
@@ -207,15 +207,15 @@
       "tier": 1,
       "month": "2026年7月",
       "monthSort": "2026-07",
-      "statusName": "领取中",
-      "statusDisplay": "会免领取中",
+      "statusName": "截止领取",
+      "statusDisplay": "会免过",
       "statusDate": "2026年8月4日",
       "versions": [
         "PS4",
         "PS5"
       ],
       "psstore": "https://www.playstation.com/zh-hans-hk/games/for-the-king-ii/",
-      "color": 7
+      "color": 5
     },
     {
       "recordId": "recvod9tLMYvCJ",
@@ -223,15 +223,15 @@
       "tier": 1,
       "month": "2026年7月",
       "monthSort": "2026-07",
-      "statusName": "领取中",
-      "statusDisplay": "会免领取中",
+      "statusName": "截止领取",
+      "statusDisplay": "会免过",
       "statusDate": "2026年8月4日",
       "versions": [
         "PS4",
         "PS5"
       ],
       "psstore": "https://www.playstation.com/zh-hans-hk/games/crosscode/",
-      "color": 7
+      "color": 5
     },
     {
       "recordId": "recvmcevuGBNEc",
