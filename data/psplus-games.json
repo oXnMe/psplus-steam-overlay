@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-13T17:31:04Z",
+  "updatedAt": "2026-08-14T17:30:30Z",
   "count": 1513,
   "games": [
     {
@@ -40,14 +40,14 @@
       "tier": 2,
       "month": "2026年8月",
       "monthSort": "2026-08",
-      "statusName": "即将入库",
-      "statusDisplay": "即将入库",
+      "statusName": "在库",
+      "statusDisplay": "在库",
       "statusDate": "2026年8月18日",
       "versions": [
         "PS5"
       ],
-      "psstore": "",
-      "color": 2
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/HP9000-PPSA06020_00-HELLDIVERS200000",
+      "color": 7
     },
     {
       "recordId": "recvs8MaSKX1r4",
@@ -61,7 +61,7 @@
       "versions": [
         "PS5"
       ],
-      "psstore": "",
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/EP4062-PPSA21704_00-KCD2MAINGAMEDSEU",
       "color": 2
     },
     {
@@ -77,7 +77,7 @@
         "PS4",
         "PS5"
       ],
-      "psstore": "",
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/EB0324-PPSA21703_00-0027916840515656",
       "color": 2
     },
     {
@@ -92,7 +92,7 @@
       "versions": [
         "PS5"
       ],
-      "psstore": "",
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/EP6665-PPSA09259_00-HIU0000000000000",
       "color": 2
     },
     {
@@ -107,7 +107,7 @@
       "versions": [
         "PS4"
       ],
-      "psstore": "",
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/HP8902-CUSA43181_00-UMAMUSUMEAS10000",
       "color": 2
     },
     {
@@ -122,7 +122,7 @@
       "versions": [
         "PS5"
       ],
-      "psstore": "",
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/EP0177-PPSA19769_00-TWOPOINTMUSEUM00",
       "color": 2
     },
     {
@@ -138,7 +138,7 @@
         "PS4",
         "PS5"
       ],
-      "psstore": "",
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/UP2047-PPSA02395_00-METROEXODUS0GEN9",
       "color": 2
     },
     {
@@ -154,7 +154,7 @@
         "PS4",
         "PS5"
       ],
-      "psstore": "",
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/UP3050-PPSA02261_00-DL2GAME0000000US",
       "color": 2
     },
     {
