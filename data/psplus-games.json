@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-08-16T16:53:03Z",
-  "count": 1513,
+  "updatedAt": "2026-08-17T16:57:10Z",
+  "count": 1517,
   "games": [
     {
       "recordId": "recvs8MCY47eRa",
@@ -8,15 +8,15 @@
       "tier": 3,
       "month": "2026年8月",
       "monthSort": "2026-08",
-      "statusName": "即将入库",
-      "statusDisplay": "即将入库",
+      "statusName": "在库",
+      "statusDisplay": "在库",
       "statusDate": "2026年8月18日",
       "versions": [
         "PS4",
         "PS5"
       ],
       "psstore": "",
-      "color": 2
+      "color": 7
     },
     {
       "recordId": "recvs8MCY4YeS6",
@@ -24,15 +24,15 @@
       "tier": 3,
       "month": "2026年8月",
       "monthSort": "2026-08",
-      "statusName": "即将入库",
-      "statusDisplay": "即将入库",
+      "statusName": "在库",
+      "statusDisplay": "在库",
       "statusDate": "2026年8月18日",
       "versions": [
         "PS4",
         "PS5"
       ],
       "psstore": "",
-      "color": 2
+      "color": 7
     },
     {
       "recordId": "recvs8MaSKH7Ls",
@@ -55,14 +55,14 @@
       "tier": 2,
       "month": "2026年8月",
       "monthSort": "2026-08",
-      "statusName": "即将入库",
-      "statusDisplay": "即将入库",
+      "statusName": "在库",
+      "statusDisplay": "在库",
       "statusDate": "2026年8月18日",
       "versions": [
         "PS5"
       ],
       "psstore": "https://store.playstation.com/zh-hant-hk/product/EP4062-PPSA21704_00-KCD2MAINGAMEDSEU",
-      "color": 2
+      "color": 7
     },
     {
       "recordId": "recvs8MaSKJw5w",
@@ -70,15 +70,15 @@
       "tier": 2,
       "month": "2026年8月",
       "monthSort": "2026-08",
-      "statusName": "即将入库",
-      "statusDisplay": "即将入库",
+      "statusName": "在库",
+      "statusDisplay": "在库",
       "statusDate": "2026年8月18日",
       "versions": [
         "PS4",
         "PS5"
       ],
       "psstore": "https://store.playstation.com/zh-hant-hk/product/EB0324-PPSA21703_00-0027916840515656",
-      "color": 2
+      "color": 7
     },
     {
       "recordId": "recvs8MaSKE7hW",
@@ -86,14 +86,14 @@
       "tier": 2,
       "month": "2026年8月",
       "monthSort": "2026-08",
-      "statusName": "即将入库",
-      "statusDisplay": "即将入库",
+      "statusName": "在库",
+      "statusDisplay": "在库",
       "statusDate": "2026年8月18日",
       "versions": [
         "PS5"
       ],
       "psstore": "https://store.playstation.com/zh-hant-hk/product/EP6665-PPSA09259_00-HIU0000000000000",
-      "color": 2
+      "color": 7
     },
     {
       "recordId": "recvs8MaSKFQvo",
@@ -101,14 +101,14 @@
       "tier": 2,
       "month": "2026年8月",
       "monthSort": "2026-08",
-      "statusName": "即将入库",
-      "statusDisplay": "即将入库",
+      "statusName": "在库",
+      "statusDisplay": "在库",
       "statusDate": "2026年8月18日",
       "versions": [
         "PS4"
       ],
       "psstore": "https://store.playstation.com/zh-hant-hk/product/HP8902-CUSA43181_00-UMAMUSUMEAS10000",
-      "color": 2
+      "color": 7
     },
     {
       "recordId": "recvs8MaSK5f83",
@@ -116,14 +116,14 @@
       "tier": 2,
       "month": "2026年8月",
       "monthSort": "2026-08",
-      "statusName": "即将入库",
-      "statusDisplay": "即将入库",
+      "statusName": "在库",
+      "statusDisplay": "在库",
       "statusDate": "2026年8月18日",
       "versions": [
         "PS5"
       ],
       "psstore": "https://store.playstation.com/zh-hant-hk/product/EP0177-PPSA19769_00-TWOPOINTMUSEUM00",
-      "color": 2
+      "color": 7
     },
     {
       "recordId": "recvs8MaSKnNuj",
@@ -131,15 +131,15 @@
       "tier": 2,
       "month": "2026年8月",
       "monthSort": "2026-08",
-      "statusName": "即将入库",
-      "statusDisplay": "即将入库",
+      "statusName": "在库",
+      "statusDisplay": "在库",
       "statusDate": "2026年8月18日",
       "versions": [
         "PS4",
         "PS5"
       ],
       "psstore": "https://store.playstation.com/zh-hant-hk/product/UP2047-PPSA02395_00-METROEXODUS0GEN9",
-      "color": 2
+      "color": 7
     },
     {
       "recordId": "recvs8MaSKzS1L",
@@ -147,15 +147,15 @@
       "tier": 2,
       "month": "2026年8月",
       "monthSort": "2026-08",
-      "statusName": "即将入库",
-      "statusDisplay": "即将入库",
+      "statusName": "在库",
+      "statusDisplay": "在库",
       "statusDate": "2026年8月18日",
       "versions": [
         "PS4",
         "PS5"
       ],
       "psstore": "https://store.playstation.com/zh-hant-hk/product/UP3050-PPSA02261_00-DL2GAME0000000US",
-      "color": 2
+      "color": 7
     },
     {
       "recordId": "recvqJjvjOkx7C",
@@ -2433,15 +2433,15 @@
       "tier": 2,
       "month": "2025年8月",
       "monthSort": "2025-08",
-      "statusName": "即将出库",
-      "statusDisplay": "即将出库",
+      "statusName": "已出库",
+      "statusDisplay": "已出库",
       "statusDate": "2026年8月18日",
       "versions": [
         "PS4",
         "PS5"
       ],
       "psstore": "https://store.playstation.com/zh-hans-hk/product/HP5846-PPSA18673_00-EDF6MASTERPKG000",
-      "color": 3
+      "color": 5
     },
     {
       "recordId": "recv83nQgyxdG9",
@@ -2449,15 +2449,15 @@
       "tier": 2,
       "month": "2025年8月",
       "monthSort": "2025-08",
-      "statusName": "即将出库",
-      "statusDisplay": "即将出库",
+      "statusName": "已出库",
+      "statusDisplay": "已出库",
       "statusDate": "2026年8月18日",
       "versions": [
         "PS4",
         "PS5"
       ],
       "psstore": "https://www.playstation.com/zh-hans-hk/games/unicorn-overlord/",
-      "color": 3
+      "color": 5
     },
     {
       "recordId": "recv83nQgywBr2",
@@ -2496,14 +2496,14 @@
       "tier": 2,
       "month": "2025年8月",
       "monthSort": "2025-08",
-      "statusName": "即将出库",
-      "statusDisplay": "即将出库",
+      "statusName": "已出库",
+      "statusDisplay": "已出库",
       "statusDate": "2026年8月18日",
       "versions": [
         "PS5"
       ],
       "psstore": "https://www.playstation.com/zh-hans-hk/games/harold-halibut/",
-      "color": 3
+      "color": 5
     },
     {
       "recordId": "recv83nQgy1D7m",
@@ -4515,15 +4515,15 @@
       "tier": 2,
       "month": "2024年11月",
       "monthSort": "2024-11",
-      "statusName": "即将出库",
-      "statusDisplay": "即将出库",
+      "statusName": "已出库",
+      "statusDisplay": "已出库",
       "statusDate": "2026年8月18日",
       "versions": [
         "PS4",
         "PS5"
       ],
       "psstore": "https://www.playstation.com/zh-hans-hk/games/clash-artifacts-of-chaos/",
-      "color": 3
+      "color": 5
     },
     {
       "recordId": "recv83nQgyDlKm",
@@ -4688,15 +4688,15 @@
       "tier": 2,
       "month": "2024年10月",
       "monthSort": "2024-10",
-      "statusName": "即将出库",
-      "statusDisplay": "即将出库",
+      "statusName": "已出库",
+      "statusDisplay": "已出库",
       "statusDate": "2026年8月18日",
       "versions": [
         "PS4",
         "PS5"
       ],
       "psstore": "https://store.playstation.com/zh-hans-hk/product/EP4062-CUSA27043_00-DI2MAINSIEEPS400",
-      "color": 3
+      "color": 5
     },
     {
       "recordId": "recv83nQgychBm",
@@ -6317,6 +6317,22 @@
       "color": 5
     },
     {
+      "recordId": "recvsxraOS06dL",
+      "steamAppId": 1945340,
+      "tier": 1,
+      "month": "2024年5月",
+      "monthSort": "2024-05",
+      "statusName": "截止领取",
+      "statusDisplay": "会免过",
+      "statusDate": "2024年6月4日",
+      "versions": [
+        "PS4",
+        "PS5"
+      ],
+      "psstore": "",
+      "color": 5
+    },
+    {
       "recordId": "recv83nQgyzn49",
       "steamAppId": "259190",
       "tier": 3,
@@ -6860,6 +6876,22 @@
         "PS5"
       ],
       "psstore": "https://www.playstation.com/zh-hans-hk/games/hello-neighbor-2/",
+      "color": 5
+    },
+    {
+      "recordId": "recvsxtn2NsFR6",
+      "steamAppId": 1656330,
+      "tier": 1,
+      "month": "2024年3月",
+      "monthSort": "2024-03",
+      "statusName": "截止领取",
+      "statusDisplay": "会免过",
+      "statusDate": "2024年4月2日",
+      "versions": [
+        "PS4",
+        "PS5"
+      ],
+      "psstore": "",
       "color": 5
     },
     {
@@ -14195,14 +14227,14 @@
       "tier": 2,
       "month": "2022年5月",
       "monthSort": "2022-05",
-      "statusName": "即将出库",
-      "statusDisplay": "即将出库",
+      "statusName": "已出库",
+      "statusDisplay": "已出库",
       "statusDate": "2026年8月18日",
       "versions": [
         "PS4"
       ],
       "psstore": "https://store.playstation.com/zh-hans-hk/product/UP4395-CUSA10423_00-ASIA000000000000",
-      "color": 3
+      "color": 5
     },
     {
       "recordId": "recvmFwgXN3Y6G",
@@ -14210,14 +14242,14 @@
       "tier": 2,
       "month": "2022年5月",
       "monthSort": "2022-05",
-      "statusName": "即将出库",
-      "statusDisplay": "即将出库",
+      "statusName": "已出库",
+      "statusDisplay": "已出库",
       "statusDate": "2026年8月18日",
       "versions": [
         "PS4"
       ],
       "psstore": "https://store.playstation.com/zh-hans-hk/product/UP4395-CUSA18162_00-SPACECREWUS00000",
-      "color": 3
+      "color": 5
     },
     {
       "recordId": "recvozuwhkOfUJ",
@@ -15730,6 +15762,22 @@
         "PS5"
       ],
       "psstore": "https://www.playstation.com/zh-hans-hk/games/ghostrunner/",
+      "color": 5
+    },
+    {
+      "recordId": "recvsxv6rEJPVd",
+      "steamAppId": 3929730,
+      "tier": 1,
+      "month": "2022年3月",
+      "monthSort": "2022-03",
+      "statusName": "截止领取",
+      "statusDisplay": "会免过",
+      "statusDate": "2022年4月5日",
+      "versions": [
+        "PS4",
+        "PS5"
+      ],
+      "psstore": "",
       "color": 5
     },
     {
@@ -20063,8 +20111,23 @@
       "color": 5
     },
     {
-      "recordId": "recv841yeS0CU4",
-      "steamAppId": null,
+      "recordId": "recvsxRLV2oE5Q",
+      "steamAppId": 349530,
+      "tier": 1,
+      "month": "2016年5月",
+      "monthSort": "2016-05",
+      "statusName": "截止领取",
+      "statusDisplay": "会免过",
+      "statusDate": "2016年6月7日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "",
+      "color": 5
+    },
+    {
+      "recordId": "recvsxRLV2dZMM",
+      "steamAppId": 21680,
       "tier": 1,
       "month": "2016年5月",
       "monthSort": "2016-05",
@@ -20074,12 +20137,12 @@
       "versions": [
         "PS3"
       ],
-      "psstore": "https://store.playstation.com/zh-hans-hk/product/HP9000-CUSA01660_00-FATPRINCESSADVNT",
+      "psstore": "",
       "color": 5
     },
     {
-      "recordId": "recv841yeSYo6A",
-      "steamAppId": "21980",
+      "recordId": "recvsxRUcNHpFV",
+      "steamAppId": 378750,
       "tier": 1,
       "month": "2016年5月",
       "monthSort": "2016-05",
@@ -20087,7 +20150,7 @@
       "statusDisplay": "会免过",
       "statusDate": "2016年6月7日",
       "versions": [
-        "PS3"
+        "PSV"
       ],
       "psstore": "",
       "color": 5
