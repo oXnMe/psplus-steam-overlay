@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-08-17T16:57:10Z",
-  "count": 1517,
+  "updatedAt": "2026-08-18T16:58:57Z",
+  "count": 1519,
   "games": [
     {
       "recordId": "recvs8MCY47eRa",
@@ -812,14 +812,14 @@
       "tier": 2,
       "month": "2026年4月",
       "monthSort": "2026-04",
-      "statusName": "在库",
-      "statusDisplay": "在库",
-      "statusDate": "2026年4月21日",
+      "statusName": "已出库",
+      "statusDisplay": "已出库",
+      "statusDate": "2026年8月18日",
       "versions": [
         "PS5"
       ],
       "psstore": "https://www.playstation.com/zh-hans-hk/games/squirrel-with-a-gun/",
-      "color": 7
+      "color": 5
     },
     {
       "recordId": "recvgVFr4bfZMt",
@@ -950,14 +950,14 @@
       "tier": 2,
       "month": "2026年3月",
       "monthSort": "2026-03",
-      "statusName": "在库",
-      "statusDisplay": "在库",
-      "statusDate": "2026年3月17日",
+      "statusName": "即将出库",
+      "statusDisplay": "即将出库",
+      "statusDate": "2026年9月15日",
       "versions": [
         "PS5"
       ],
       "psstore": "https://www.playstation.com/zh-hans-hk/games/madden-nfl-26/",
-      "color": 7
+      "color": 3
     },
     {
       "recordId": "recvdDrluJce84",
@@ -2213,15 +2213,15 @@
       "tier": 2,
       "month": "2025年9月",
       "monthSort": "2025-09",
-      "statusName": "在库",
-      "statusDisplay": "在库",
-      "statusDate": "2025年9月16日",
+      "statusName": "即将出库",
+      "statusDisplay": "即将出库",
+      "statusDate": "2026年9月15日",
       "versions": [
         "PS4",
         "PS5"
       ],
       "psstore": "https://store.playstation.com/zh-hans-hk/product/HP0177-PPSA16520_00-P5TPS5AS00000001",
-      "color": 7
+      "color": 3
     },
     {
       "recordId": "recv83nQgyMLUF",
@@ -7660,15 +7660,15 @@
       "tier": 2,
       "month": "2023年12月",
       "monthSort": "2023-12",
-      "statusName": "在库",
-      "statusDisplay": "在库",
-      "statusDate": "2023年12月19日",
+      "statusName": "即将出库",
+      "statusDisplay": "即将出库",
+      "statusDate": "2026年9月15日",
       "versions": [
         "PS4",
         "PS5"
       ],
       "psstore": "https://store.playstation.com/zh-hans-hk/product/EP4139-PPSA04120_00-SHADOWRUNRETEU01",
-      "color": 7
+      "color": 3
     },
     {
       "recordId": "recv83nQgyUDhP",
@@ -7676,15 +7676,15 @@
       "tier": 2,
       "month": "2023年12月",
       "monthSort": "2023-12",
-      "statusName": "在库",
-      "statusDisplay": "在库",
-      "statusDate": "2023年12月19日",
+      "statusName": "即将出库",
+      "statusDisplay": "即将出库",
+      "statusDate": "2026年9月15日",
       "versions": [
         "PS4",
         "PS5"
       ],
       "psstore": "https://store.playstation.com/zh-hans-hk/product/EP4139-PPSA04110_00-SHADOWDRAGONEU01",
-      "color": 7
+      "color": 3
     },
     {
       "recordId": "recv83nQgykeEp",
@@ -7692,15 +7692,15 @@
       "tier": 2,
       "month": "2023年12月",
       "monthSort": "2023-12",
-      "statusName": "在库",
-      "statusDisplay": "在库",
-      "statusDate": "2023年12月19日",
+      "statusName": "即将出库",
+      "statusDisplay": "即将出库",
+      "statusDate": "2026年9月15日",
       "versions": [
         "PS4",
         "PS5"
       ],
       "psstore": "https://store.playstation.com/zh-hans-hk/product/EP4139-PPSA04112_00-SHADOWHKEXTENDEU",
-      "color": 7
+      "color": 3
     },
     {
       "recordId": "recv841yeSQI8p",
@@ -12918,6 +12918,38 @@
       "color": 5
     },
     {
+      "recordId": "recvsBRMaA3Q4L",
+      "steamAppId": 4049180,
+      "tier": 3,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "即将出库",
+      "statusDisplay": "即将出库",
+      "statusDate": "2026年9月15日",
+      "versions": [
+        "PS4",
+        "PS5"
+      ],
+      "psstore": "https://store.playstation.com/zh-hans-hk/product/UP1082-PPSA07371_00-1681045715813978",
+      "color": 3
+    },
+    {
+      "recordId": "recvsBRMGKwZlo",
+      "steamAppId": 4049180,
+      "tier": 3,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "即将出库",
+      "statusDisplay": "即将出库",
+      "statusDate": "2026年9月15日",
+      "versions": [
+        "PS4",
+        "PS5"
+      ],
+      "psstore": "https://store.playstation.com/zh-hans-hk/product/UP1082-PPSA07373_00-7790102558097475",
+      "color": 3
+    },
+    {
       "recordId": "recv83nQgyBf33",
       "steamAppId": "464920",
       "tier": 2,
@@ -15640,6 +15672,280 @@
       ],
       "psstore": "https://store.playstation.com/zh-hans-hk/product/UP4134-CUSA00329_00-ASIA000000000000",
       "color": 7
+    },
+    {
+      "recordId": "recvqyRHh7ZHS6",
+      "steamAppId": "552700",
+      "tier": 2,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "已出库",
+      "statusDisplay": "已出库",
+      "statusDate": "2024年5月21日",
+      "versions": [
+        "PSV",
+        "PS4"
+      ],
+      "psstore": "https://www.playstation.com/zh-hans-hk/games/world-of-final-fantasy/",
+      "color": 5
+    },
+    {
+      "recordId": "recvqyRRv5pE6b",
+      "steamAppId": "3837340",
+      "tier": 2,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "已出库",
+      "statusDisplay": "已出库",
+      "statusDate": "2024年5月21日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://www.playstation.com/zh-hans-hk/games/final-fantasy-vii/",
+      "color": 5
+    },
+    {
+      "recordId": "recvqyRWyxRs15",
+      "steamAppId": "1026680",
+      "tier": 2,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "已出库",
+      "statusDisplay": "已出库",
+      "statusDate": "2024年5月21日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://www.playstation.com/zh-hans-hk/games/final-fantasy-viii-remastered/",
+      "color": 5
+    },
+    {
+      "recordId": "recvqyS0vJrgKT",
+      "steamAppId": "377840",
+      "tier": 2,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "已出库",
+      "statusDisplay": "已出库",
+      "statusDate": "2024年5月21日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://www.playstation.com/zh-hans-hk/games/final-fantasy-ix/",
+      "color": 5
+    },
+    {
+      "recordId": "recvqyS66zTjVO",
+      "steamAppId": "359870",
+      "tier": 2,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "已出库",
+      "statusDisplay": "已出库",
+      "statusDate": "2024年5月21日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://store.playstation.com/zh-hans-hk/product/HP0082-CUSA01188_00-FFX0FFX20ASIAPS4",
+      "color": 5
+    },
+    {
+      "recordId": "recvqyS66zOGIS",
+      "steamAppId": null,
+      "tier": 2,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "已出库",
+      "statusDisplay": "已出库",
+      "statusDate": "2024年5月21日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://store.playstation.com/zh-hans-hk/product/HP0082-CUSA01188_00-FFX0FFX20ASIAPS4",
+      "color": 5
+    },
+    {
+      "recordId": "recvqyS66zJorK",
+      "steamAppId": "595520",
+      "tier": 2,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "已出库",
+      "statusDisplay": "已出库",
+      "statusDate": "2024年5月21日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://store.playstation.com/zh-hans-hk/product/HP0082-CUSA08116_00-ASIAPLACEHOLDER0",
+      "color": 5
+    },
+    {
+      "recordId": "recvqySaB9IFqT",
+      "steamAppId": "384190",
+      "tier": 2,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "已出库",
+      "statusDisplay": "已出库",
+      "statusDate": "2024年5月21日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://www.playstation.com/zh-hans-hk/games/abzu/",
+      "color": 5
+    },
+    {
+      "recordId": "recvqySfLxMtGD",
+      "steamAppId": "300060",
+      "tier": 2,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "已出库",
+      "statusDisplay": "已出库",
+      "statusDate": "2024年5月21日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://store.playstation.com/zh-hans-hk/product/EP4040-CUSA02519_00-ASIA000000000000",
+      "color": 5
+    },
+    {
+      "recordId": "recvqySk1STI97",
+      "steamAppId": "360170",
+      "tier": 2,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "已出库",
+      "statusDisplay": "已出库",
+      "statusDate": "2024年5月21日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://store.playstation.com/zh-hans-hk/product/EP4040-CUSA07008_00-ASIA000000000000",
+      "color": 5
+    },
+    {
+      "recordId": "recvqyStkvMv1x",
+      "steamAppId": "1122680",
+      "tier": 2,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "已出库",
+      "statusDisplay": "已出库",
+      "statusDate": "2024年5月21日",
+      "versions": [
+        "PS4",
+        "PS5"
+      ],
+      "psstore": "https://www.playstation.com/zh-hans-hk/games/the-artful-escape/",
+      "color": 5
+    },
+    {
+      "recordId": "recvqySSBDWsDP",
+      "steamAppId": "649950",
+      "tier": 2,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "已出库",
+      "statusDisplay": "已出库",
+      "statusDate": "2024年5月21日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://www.playstation.com/zh-hans-hk/games/ashen/",
+      "color": 5
+    },
+    {
+      "recordId": "recvqySW3pJEH7",
+      "steamAppId": "1122690",
+      "tier": 2,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "已出库",
+      "statusDisplay": "已出库",
+      "statusDate": "2024年5月21日",
+      "versions": [
+        "PS4",
+        "PS5"
+      ],
+      "psstore": "https://www.playstation.com/zh-hans-hk/games/last-stop/",
+      "color": 5
+    },
+    {
+      "recordId": "recvqyT0I5fRDn",
+      "steamAppId": "951750",
+      "tier": 2,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "已出库",
+      "statusDisplay": "已出库",
+      "statusDate": "2024年5月21日",
+      "versions": [
+        "PS4",
+        "PS5"
+      ],
+      "psstore": "https://www.playstation.com/zh-hans-hk/games/i-am-dead/",
+      "color": 5
+    },
+    {
+      "recordId": "recvqyT4XdJpHo",
+      "steamAppId": "557340",
+      "tier": 2,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "已出库",
+      "statusDisplay": "已出库",
+      "statusDate": "2024年5月21日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://www.playstation.com/zh-hans-hk/games/my-friend-pedro/",
+      "color": 5
+    },
+    {
+      "recordId": "recvqyTdOATfRr",
+      "steamAppId": "764790",
+      "tier": 2,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "已出库",
+      "statusDisplay": "已出库",
+      "statusDate": "2024年5月21日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://www.playstation.com/zh-hans-hk/games/the-messenger/",
+      "color": 5
+    },
+    {
+      "recordId": "recvqyTeoJLuve",
+      "steamAppId": "443810",
+      "tier": 2,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "已出库",
+      "statusDisplay": "已出库",
+      "statusDate": "2024年5月21日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://store.playstation.com/zh-hans-hk/product/UP4389-CUSA05852_00-ASIA000000000000",
+      "color": 5
+    },
+    {
+      "recordId": "recvqyTjIrqW2l",
+      "steamAppId": "411300",
+      "tier": 2,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "已出库",
+      "statusDisplay": "已出库",
+      "statusDate": "2024年5月21日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://store.playstation.com/zh-hans-hk/product/EP4389-CUSA04462_00-ASIA000000000000",
+      "color": 5
     },
     {
       "recordId": "recv841yeSYm4j",
@@ -23095,280 +23401,6 @@
         "PS4"
       ],
       "psstore": "https://www.playstation.com/zh-hans-hk/games/dont-starve-console-edition/",
-      "color": 5
-    },
-    {
-      "recordId": "recvqyRHh7ZHS6",
-      "steamAppId": "552700",
-      "tier": 2,
-      "month": "",
-      "monthSort": "",
-      "statusName": "已出库",
-      "statusDisplay": "已出库",
-      "statusDate": "2024年5月21日",
-      "versions": [
-        "PSV",
-        "PS4"
-      ],
-      "psstore": "https://www.playstation.com/zh-hans-hk/games/world-of-final-fantasy/",
-      "color": 5
-    },
-    {
-      "recordId": "recvqyRRv5pE6b",
-      "steamAppId": "3837340",
-      "tier": 2,
-      "month": "",
-      "monthSort": "",
-      "statusName": "已出库",
-      "statusDisplay": "已出库",
-      "statusDate": "2024年5月21日",
-      "versions": [
-        "PS4"
-      ],
-      "psstore": "https://www.playstation.com/zh-hans-hk/games/final-fantasy-vii/",
-      "color": 5
-    },
-    {
-      "recordId": "recvqyRWyxRs15",
-      "steamAppId": "1026680",
-      "tier": 2,
-      "month": "",
-      "monthSort": "",
-      "statusName": "已出库",
-      "statusDisplay": "已出库",
-      "statusDate": "2024年5月21日",
-      "versions": [
-        "PS4"
-      ],
-      "psstore": "https://www.playstation.com/zh-hans-hk/games/final-fantasy-viii-remastered/",
-      "color": 5
-    },
-    {
-      "recordId": "recvqyS0vJrgKT",
-      "steamAppId": "377840",
-      "tier": 2,
-      "month": "",
-      "monthSort": "",
-      "statusName": "已出库",
-      "statusDisplay": "已出库",
-      "statusDate": "2024年5月21日",
-      "versions": [
-        "PS4"
-      ],
-      "psstore": "https://www.playstation.com/zh-hans-hk/games/final-fantasy-ix/",
-      "color": 5
-    },
-    {
-      "recordId": "recvqyS66zTjVO",
-      "steamAppId": "359870",
-      "tier": 2,
-      "month": "",
-      "monthSort": "",
-      "statusName": "已出库",
-      "statusDisplay": "已出库",
-      "statusDate": "2024年5月21日",
-      "versions": [
-        "PS4"
-      ],
-      "psstore": "https://store.playstation.com/zh-hans-hk/product/HP0082-CUSA01188_00-FFX0FFX20ASIAPS4",
-      "color": 5
-    },
-    {
-      "recordId": "recvqyS66zOGIS",
-      "steamAppId": null,
-      "tier": 2,
-      "month": "",
-      "monthSort": "",
-      "statusName": "已出库",
-      "statusDisplay": "已出库",
-      "statusDate": "2024年5月21日",
-      "versions": [
-        "PS4"
-      ],
-      "psstore": "https://store.playstation.com/zh-hans-hk/product/HP0082-CUSA01188_00-FFX0FFX20ASIAPS4",
-      "color": 5
-    },
-    {
-      "recordId": "recvqyS66zJorK",
-      "steamAppId": "595520",
-      "tier": 2,
-      "month": "",
-      "monthSort": "",
-      "statusName": "已出库",
-      "statusDisplay": "已出库",
-      "statusDate": "2024年5月21日",
-      "versions": [
-        "PS4"
-      ],
-      "psstore": "https://store.playstation.com/zh-hans-hk/product/HP0082-CUSA08116_00-ASIAPLACEHOLDER0",
-      "color": 5
-    },
-    {
-      "recordId": "recvqySaB9IFqT",
-      "steamAppId": "384190",
-      "tier": 2,
-      "month": "",
-      "monthSort": "",
-      "statusName": "已出库",
-      "statusDisplay": "已出库",
-      "statusDate": "2024年5月21日",
-      "versions": [
-        "PS4"
-      ],
-      "psstore": "https://www.playstation.com/zh-hans-hk/games/abzu/",
-      "color": 5
-    },
-    {
-      "recordId": "recvqySfLxMtGD",
-      "steamAppId": "300060",
-      "tier": 2,
-      "month": "",
-      "monthSort": "",
-      "statusName": "已出库",
-      "statusDisplay": "已出库",
-      "statusDate": "2024年5月21日",
-      "versions": [
-        "PS4"
-      ],
-      "psstore": "https://store.playstation.com/zh-hans-hk/product/EP4040-CUSA02519_00-ASIA000000000000",
-      "color": 5
-    },
-    {
-      "recordId": "recvqySk1STI97",
-      "steamAppId": "360170",
-      "tier": 2,
-      "month": "",
-      "monthSort": "",
-      "statusName": "已出库",
-      "statusDisplay": "已出库",
-      "statusDate": "2024年5月21日",
-      "versions": [
-        "PS4"
-      ],
-      "psstore": "https://store.playstation.com/zh-hans-hk/product/EP4040-CUSA07008_00-ASIA000000000000",
-      "color": 5
-    },
-    {
-      "recordId": "recvqyStkvMv1x",
-      "steamAppId": "1122680",
-      "tier": 2,
-      "month": "",
-      "monthSort": "",
-      "statusName": "已出库",
-      "statusDisplay": "已出库",
-      "statusDate": "2024年5月21日",
-      "versions": [
-        "PS4",
-        "PS5"
-      ],
-      "psstore": "https://www.playstation.com/zh-hans-hk/games/the-artful-escape/",
-      "color": 5
-    },
-    {
-      "recordId": "recvqySSBDWsDP",
-      "steamAppId": "649950",
-      "tier": 2,
-      "month": "",
-      "monthSort": "",
-      "statusName": "已出库",
-      "statusDisplay": "已出库",
-      "statusDate": "2024年5月21日",
-      "versions": [
-        "PS4"
-      ],
-      "psstore": "https://www.playstation.com/zh-hans-hk/games/ashen/",
-      "color": 5
-    },
-    {
-      "recordId": "recvqySW3pJEH7",
-      "steamAppId": "1122690",
-      "tier": 2,
-      "month": "",
-      "monthSort": "",
-      "statusName": "已出库",
-      "statusDisplay": "已出库",
-      "statusDate": "2024年5月21日",
-      "versions": [
-        "PS4",
-        "PS5"
-      ],
-      "psstore": "https://www.playstation.com/zh-hans-hk/games/last-stop/",
-      "color": 5
-    },
-    {
-      "recordId": "recvqyT0I5fRDn",
-      "steamAppId": "951750",
-      "tier": 2,
-      "month": "",
-      "monthSort": "",
-      "statusName": "已出库",
-      "statusDisplay": "已出库",
-      "statusDate": "2024年5月21日",
-      "versions": [
-        "PS4",
-        "PS5"
-      ],
-      "psstore": "https://www.playstation.com/zh-hans-hk/games/i-am-dead/",
-      "color": 5
-    },
-    {
-      "recordId": "recvqyT4XdJpHo",
-      "steamAppId": "557340",
-      "tier": 2,
-      "month": "",
-      "monthSort": "",
-      "statusName": "已出库",
-      "statusDisplay": "已出库",
-      "statusDate": "2024年5月21日",
-      "versions": [
-        "PS4"
-      ],
-      "psstore": "https://www.playstation.com/zh-hans-hk/games/my-friend-pedro/",
-      "color": 5
-    },
-    {
-      "recordId": "recvqyTdOATfRr",
-      "steamAppId": "764790",
-      "tier": 2,
-      "month": "",
-      "monthSort": "",
-      "statusName": "已出库",
-      "statusDisplay": "已出库",
-      "statusDate": "2024年5月21日",
-      "versions": [
-        "PS4"
-      ],
-      "psstore": "https://www.playstation.com/zh-hans-hk/games/the-messenger/",
-      "color": 5
-    },
-    {
-      "recordId": "recvqyTeoJLuve",
-      "steamAppId": "443810",
-      "tier": 2,
-      "month": "",
-      "monthSort": "",
-      "statusName": "已出库",
-      "statusDisplay": "已出库",
-      "statusDate": "2024年5月21日",
-      "versions": [
-        "PS4"
-      ],
-      "psstore": "https://store.playstation.com/zh-hans-hk/product/UP4389-CUSA05852_00-ASIA000000000000",
-      "color": 5
-    },
-    {
-      "recordId": "recvqyTjIrqW2l",
-      "steamAppId": "411300",
-      "tier": 2,
-      "month": "",
-      "monthSort": "",
-      "statusName": "已出库",
-      "statusDisplay": "已出库",
-      "statusDate": "2024年5月21日",
-      "versions": [
-        "PS4"
-      ],
-      "psstore": "https://store.playstation.com/zh-hans-hk/product/EP4389-CUSA04462_00-ASIA000000000000",
       "color": 5
     }
   ]
