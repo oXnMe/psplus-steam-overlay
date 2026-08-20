@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-08-19T16:57:20Z",
-  "count": 1519,
+  "updatedAt": "2026-08-20T17:02:15Z",
+  "count": 1518,
   "games": [
     {
       "recordId": "recvs8MCY47eRa",
@@ -11930,15 +11930,15 @@
       "tier": 3,
       "month": "2022年9月",
       "monthSort": "2022-09",
-      "statusName": "在库",
-      "statusDisplay": "在库",
-      "statusDate": "2022年9月20日",
+      "statusName": "即将出库",
+      "statusDisplay": "即将出库",
+      "statusDate": "2026年9月15日",
       "versions": [
         "PS4",
         "PS5"
       ],
       "psstore": "https://store.playstation.com/zh-hans-hk/product/UP1082-PPSA07373_00-7790102558097475",
-      "color": 7
+      "color": 3
     },
     {
       "recordId": "recv83nQgye2ny",
