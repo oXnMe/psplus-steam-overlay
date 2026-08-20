@@ -12934,22 +12934,6 @@
       "color": 3
     },
     {
-      "recordId": "recvsBRMGKwZlo",
-      "steamAppId": 4049180,
-      "tier": 3,
-      "month": "2022年5月",
-      "monthSort": "2022-05",
-      "statusName": "即将出库",
-      "statusDisplay": "即将出库",
-      "statusDate": "2026年9月15日",
-      "versions": [
-        "PS4",
-        "PS5"
-      ],
-      "psstore": "https://store.playstation.com/zh-hans-hk/product/UP1082-PPSA07373_00-7790102558097475",
-      "color": 3
-    },
-    {
       "recordId": "recv83nQgyBf33",
       "steamAppId": "464920",
       "tier": 2,
