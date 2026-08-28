@@ -1,10 +1,41 @@
 {
-  "updatedAt": "2026-08-26T18:18:20Z",
-  "count": 1521,
+  "updatedAt": "2026-08-28T01:04:39Z",
+  "count": 1522,
   "games": [
     {
       "recordId": "recvtnS1kAnHuV",
-      "steamAppId": 2169200,
+      "steamAppId": "2169200",
+      "tier": 1,
+      "month": "2026年9月",
+      "monthSort": "2026-09",
+      "statusName": "即将会免",
+      "statusDisplay": "即将会免",
+      "statusDate": "2026年9月1日",
+      "versions": [
+        "PS4",
+        "PS5"
+      ],
+      "psstore": "",
+      "color": 2
+    },
+    {
+      "recordId": "recvts5H15f4cd",
+      "steamAppId": null,
+      "tier": 1,
+      "month": "2026年9月",
+      "monthSort": "2026-09",
+      "statusName": "即将会免",
+      "statusDisplay": "即将会免",
+      "statusDate": "2026年9月1日",
+      "versions": [
+        "PS5"
+      ],
+      "psstore": "",
+      "color": 2
+    },
+    {
+      "recordId": "recvtnXMCzB8Gw",
+      "steamAppId": "1211020",
       "tier": 1,
       "month": "2026年9月",
       "monthSort": "2026-09",
@@ -20,7 +51,7 @@
     },
     {
       "recordId": "recvtnV4nQPXbM",
-      "steamAppId": 1229240,
+      "steamAppId": "1229240",
       "tier": 1,
       "month": "2026年9月",
       "monthSort": "2026-09",
@@ -29,22 +60,6 @@
       "statusDate": "2026年9月1日",
       "versions": [
         "PS4"
-      ],
-      "psstore": "",
-      "color": 2
-    },
-    {
-      "recordId": "recvtnXMCzB8Gw",
-      "steamAppId": 1211020,
-      "tier": 1,
-      "month": "2026年9月",
-      "monthSort": "2026-09",
-      "statusName": "即将会免",
-      "statusDisplay": "即将会免",
-      "statusDate": "2026年9月1日",
-      "versions": [
-        "PS4",
-        "PS5"
       ],
       "psstore": "",
       "color": 2
