@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-30T19:24:03Z",
+  "updatedAt": "2026-08-31T21:34:59Z",
   "count": 1522,
   "games": [
     {
@@ -8,15 +8,15 @@
       "tier": 1,
       "month": "2026年9月",
       "monthSort": "2026-09",
-      "statusName": "即将会免",
-      "statusDisplay": "即将会免",
-      "statusDate": "2026年9月1日",
+      "statusName": "领取中",
+      "statusDisplay": "会免领取中",
+      "statusDate": "2026年10月6日",
       "versions": [
         "PS4",
         "PS5"
       ],
       "psstore": "https://store.playstation.com/zh-hant-hk/product/UP4363-PPSA17232_00-SNIPERELITERES00",
-      "color": 2
+      "color": 7
     },
     {
       "recordId": "recvts5H15f4cd",
@@ -24,14 +24,14 @@
       "tier": 1,
       "month": "2026年9月",
       "monthSort": "2026-09",
-      "statusName": "即将会免",
-      "statusDisplay": "即将会免",
-      "statusDate": "2026年9月1日",
+      "statusName": "领取中",
+      "statusDisplay": "会免领取中",
+      "statusDate": "2026年10月6日",
       "versions": [
         "PS5"
       ],
       "psstore": "https://store.playstation.com/zh-hant-hk/product/UP9000-PPSA30630_00-MLBTHESHOW26SHIP",
-      "color": 2
+      "color": 7
     },
     {
       "recordId": "recvtnXMCzB8Gw",
@@ -39,15 +39,15 @@
       "tier": 1,
       "month": "2026年9月",
       "monthSort": "2026-09",
-      "statusName": "即将会免",
-      "statusDisplay": "即将会免",
-      "statusDate": "2026年9月1日",
+      "statusName": "领取中",
+      "statusDisplay": "会免领取中",
+      "statusDate": "2026年10月6日",
       "versions": [
         "PS4",
         "PS5"
       ],
       "psstore": "https://store.playstation.com/zh-hant-hk/product/UP7742-PPSA29413_00-0632159817352246",
-      "color": 2
+      "color": 7
     },
     {
       "recordId": "recvtnV4nQPXbM",
@@ -55,14 +55,14 @@
       "tier": 1,
       "month": "2026年9月",
       "monthSort": "2026-09",
-      "statusName": "即将会免",
-      "statusDisplay": "即将会免",
-      "statusDate": "2026年9月1日",
+      "statusName": "领取中",
+      "statusDisplay": "会免领取中",
+      "statusDate": "2026年10月6日",
       "versions": [
         "PS4"
       ],
       "psstore": "https://store.playstation.com/zh-hant-hk/product/EP0900-CUSA29547_00-4103461541053748",
-      "color": 2
+      "color": 7
     },
     {
       "recordId": "recvs8MCY47eRa",
