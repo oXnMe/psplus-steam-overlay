@@ -1,7 +1,162 @@
 {
-  "updatedAt": "2026-09-08T19:31:41Z",
-  "count": 1522,
+  "updatedAt": "2026-09-09T19:23:48Z",
+  "count": 1532,
   "games": [
+    {
+      "recordId": "recvuK2foD2NFO",
+      "steamAppId": 623000,
+      "tier": 3,
+      "month": "2026年9月",
+      "monthSort": "2026-09",
+      "statusName": "即将入库",
+      "statusDisplay": "即将入库",
+      "statusDate": "2026年9月15日",
+      "versions": [
+        "PS4",
+        "PS5"
+      ],
+      "psstore": "",
+      "color": 2
+    },
+    {
+      "recordId": "recvuK2foDxath",
+      "steamAppId": 286690,
+      "tier": 3,
+      "month": "2026年9月",
+      "monthSort": "2026-09",
+      "statusName": "即将入库",
+      "statusDisplay": "即将入库",
+      "statusDate": "2026年9月15日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "",
+      "color": 2
+    },
+    {
+      "recordId": "recvuK2foDivcM",
+      "steamAppId": 1374490,
+      "tier": 2,
+      "month": "2026年9月",
+      "monthSort": "2026-09",
+      "statusName": "即将入库",
+      "statusDisplay": "即将入库",
+      "statusDate": "2026年9月15日",
+      "versions": [
+        "PS5"
+      ],
+      "psstore": "",
+      "color": 2
+    },
+    {
+      "recordId": "recvuK2foDaMtn",
+      "steamAppId": 3717070,
+      "tier": 2,
+      "month": "2026年9月",
+      "monthSort": "2026-09",
+      "statusName": "即将入库",
+      "statusDisplay": "即将入库",
+      "statusDate": "2026年9月15日",
+      "versions": [
+        "PS5"
+      ],
+      "psstore": "",
+      "color": 2
+    },
+    {
+      "recordId": "recvuK2foDtnlc",
+      "steamAppId": 2062430,
+      "tier": 2,
+      "month": "2026年9月",
+      "monthSort": "2026-09",
+      "statusName": "即将入库",
+      "statusDisplay": "即将入库",
+      "statusDate": "2026年9月15日",
+      "versions": [
+        "PS5"
+      ],
+      "psstore": "",
+      "color": 2
+    },
+    {
+      "recordId": "recvuK2foDGFEa",
+      "steamAppId": 2201320,
+      "tier": 2,
+      "month": "2026年9月",
+      "monthSort": "2026-09",
+      "statusName": "即将入库",
+      "statusDisplay": "即将入库",
+      "statusDate": "2026年9月15日",
+      "versions": [
+        "PS5"
+      ],
+      "psstore": "",
+      "color": 2
+    },
+    {
+      "recordId": "recvuK2foDRkcV",
+      "steamAppId": 2631250,
+      "tier": 2,
+      "month": "2026年9月",
+      "monthSort": "2026-09",
+      "statusName": "即将入库",
+      "statusDisplay": "即将入库",
+      "statusDate": "2026年9月15日",
+      "versions": [
+        "PS4",
+        "PS5"
+      ],
+      "psstore": "",
+      "color": 2
+    },
+    {
+      "recordId": "recvuK2foDns10",
+      "steamAppId": 2542120,
+      "tier": 2,
+      "month": "2026年9月",
+      "monthSort": "2026-09",
+      "statusName": "即将入库",
+      "statusDisplay": "即将入库",
+      "statusDate": "2026年9月15日",
+      "versions": [
+        "PS4",
+        "PS5"
+      ],
+      "psstore": "",
+      "color": 2
+    },
+    {
+      "recordId": "recvuK2foDJ8gu",
+      "steamAppId": 1983260,
+      "tier": 2,
+      "month": "2026年9月",
+      "monthSort": "2026-09",
+      "statusName": "即将入库",
+      "statusDisplay": "即将入库",
+      "statusDate": "2026年9月15日",
+      "versions": [
+        "PS4",
+        "PS5"
+      ],
+      "psstore": "",
+      "color": 2
+    },
+    {
+      "recordId": "recvuK2foDa0Jw",
+      "steamAppId": 2169200,
+      "tier": 2,
+      "month": "2026年9月",
+      "monthSort": "2026-09",
+      "statusName": "即将入库",
+      "statusDisplay": "即将入库",
+      "statusDate": "2026年9月15日",
+      "versions": [
+        "PS4",
+        "PS5"
+      ],
+      "psstore": "",
+      "color": 2
+    },
     {
       "recordId": "recvtnS1kAnHuV",
       "steamAppId": "2169200",
