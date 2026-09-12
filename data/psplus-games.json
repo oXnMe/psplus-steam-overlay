@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-11T19:14:13Z",
-  "count": 1532,
+  "updatedAt": "2026-09-12T18:37:43Z",
+  "count": 1533,
   "games": [
     {
       "recordId": "recvuK2foD2NFO",
@@ -19,6 +19,21 @@
       "color": 2
     },
     {
+      "recordId": "recvuZf0vOas5I",
+      "steamAppId": 286690,
+      "tier": 3,
+      "month": "2026年9月",
+      "monthSort": "2026-09",
+      "statusName": "即将入库",
+      "statusDisplay": "即将入库",
+      "statusDate": "2026年9月15日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/UP2047-CUSA00623_00-ASIA0000FULLGAME",
+      "color": 2
+    },
+    {
       "recordId": "recvuK2foDxath",
       "steamAppId": 286690,
       "tier": 3,
@@ -30,7 +45,7 @@
       "versions": [
         "PS4"
       ],
-      "psstore": "",
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/UP2047-CUSA00624_00-ASIA0000FULLGAME",
       "color": 2
     },
     {
