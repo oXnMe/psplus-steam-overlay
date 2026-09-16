@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-15T19:47:04Z",
+  "updatedAt": "2026-09-16T19:39:15Z",
   "count": 1534,
   "games": [
     {
@@ -2228,14 +2228,14 @@
       "tier": 2,
       "month": "2025年10月",
       "monthSort": "2025-10",
-      "statusName": "在库",
-      "statusDisplay": "在库",
-      "statusDate": "2025年10月21日",
+      "statusName": "即将出库",
+      "statusDisplay": "即将出库",
+      "statusDate": "2026年10月20日",
       "versions": [
         "PS5"
       ],
       "psstore": "https://www.playstation.com/zh-hans-hk/games/silent-hill-2/",
-      "color": 7
+      "color": 3
     },
     {
       "recordId": "recv83nQgyBou0",
@@ -2273,14 +2273,14 @@
       "tier": 2,
       "month": "2025年10月",
       "monthSort": "2025-10",
-      "statusName": "在库",
-      "statusDisplay": "在库",
-      "statusDate": "2025年10月21日",
+      "statusName": "即将出库",
+      "statusDisplay": "即将出库",
+      "statusDate": "2026年10月20日",
       "versions": [
         "PS4"
       ],
       "psstore": "https://www.playstation.com/zh-hans-hk/games/ryu-ga-gotoku-7/",
-      "color": 7
+      "color": 3
     },
     {
       "recordId": "recv9oTjPZSQQW",
@@ -2288,14 +2288,14 @@
       "tier": 2,
       "month": "2025年10月",
       "monthSort": "2025-10",
-      "statusName": "在库",
-      "statusDisplay": "在库",
-      "statusDate": "2025年10月21日",
+      "statusName": "即将出库",
+      "statusDisplay": "即将出库",
+      "statusDate": "2026年10月20日",
       "versions": [
         "PS5"
       ],
       "psstore": "https://www.playstation.com/zh-hans-hk/games/yakuza-like-a-dragon/",
-      "color": 7
+      "color": 3
     },
     {
       "recordId": "recv83nQgy2I82",
@@ -3431,15 +3431,15 @@
       "tier": 2,
       "month": "2025年5月",
       "monthSort": "2025-05",
-      "statusName": "在库",
-      "statusDisplay": "在库",
-      "statusDate": "2025年5月20日",
+      "statusName": "即将出库",
+      "statusDisplay": "即将出库",
+      "statusDate": "2026年10月20日",
       "versions": [
         "PS4",
         "PS5"
       ],
       "psstore": "https://store.playstation.com/zh-hans-hk/product/UP4744-PPSA08115_00-GLOOMHAVENMERC01",
-      "color": 7
+      "color": 3
     },
     {
       "recordId": "recv83nQgyh5OF",
@@ -4464,15 +4464,15 @@
       "tier": 2,
       "month": "2024年12月",
       "monthSort": "2024-12",
-      "statusName": "在库",
-      "statusDisplay": "在库",
-      "statusDate": "2024年12月17日",
+      "statusName": "即将出库",
+      "statusDisplay": "即将出库",
+      "statusDate": "2026年10月20日",
       "versions": [
         "PS4",
         "PS5"
       ],
       "psstore": "https://www.playstation.com/zh-hans-hk/games/jurassic-world-evolution-2/",
-      "color": 7
+      "color": 3
     },
     {
       "recordId": "recv83nQgyvi2M",
@@ -7331,14 +7331,14 @@
       "tier": 2,
       "month": "2024年2月",
       "monthSort": "2024-02",
-      "statusName": "在库",
-      "statusDisplay": "在库",
-      "statusDate": "2024年2月20日",
+      "statusName": "即将出库",
+      "statusDisplay": "即将出库",
+      "statusDate": "2026年10月20日",
       "versions": [
         "PS4"
       ],
       "psstore": "https://store.playstation.com/zh-hans-hk/product/EP4008-CUSA19326_00-RLSIEE0000000000",
-      "color": 7
+      "color": 3
     },
     {
       "recordId": "recv83nQgyFOO8",
@@ -15426,14 +15426,14 @@
       "tier": 2,
       "month": "2022年5月",
       "monthSort": "2022-05",
-      "statusName": "在库",
-      "statusDisplay": "在库",
-      "statusDate": "2022年5月17日",
+      "statusName": "即将出库",
+      "statusDisplay": "即将出库",
+      "statusDate": "2026年10月20日",
       "versions": [
         "PS4"
       ],
       "psstore": "https://store.playstation.com/zh-hans-hk/product/UP1014-CUSA09973_00-ASIAESTMOONLOHSE",
-      "color": 7
+      "color": 3
     },
     {
       "recordId": "recvozuy1rxtwr",
