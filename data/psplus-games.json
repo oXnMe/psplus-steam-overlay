@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-16T19:39:15Z",
-  "count": 1534,
+  "updatedAt": "2026-09-17T19:48:38Z",
+  "count": 1535,
   "games": [
     {
       "recordId": "recvuK2foD2NFO",
@@ -46,6 +46,22 @@
         "PS4"
       ],
       "psstore": "https://store.playstation.com/zh-hant-hk/product/UP2047-CUSA00624_00-ASIA0000FULLGAME",
+      "color": 7
+    },
+    {
+      "recordId": "recvvsil0PFV8p",
+      "steamAppId": 1151340,
+      "tier": 2,
+      "month": "2026年9月",
+      "monthSort": "2026-09",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2026年9月15日",
+      "versions": [
+        "PS4",
+        "PS5"
+      ],
+      "psstore": "",
       "color": 7
     },
     {
@@ -2234,7 +2250,7 @@
       "versions": [
         "PS5"
       ],
-      "psstore": "https://www.playstation.com/zh-hans-hk/games/silent-hill-2/",
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/HP0101-PPSA10644_00-MAINGAME00000000",
       "color": 3
     },
     {
@@ -2279,7 +2295,7 @@
       "versions": [
         "PS4"
       ],
-      "psstore": "https://www.playstation.com/zh-hans-hk/games/ryu-ga-gotoku-7/",
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/HP0177-CUSA17680_00-ASIA000000000000",
       "color": 3
     },
     {
@@ -2294,7 +2310,7 @@
       "versions": [
         "PS5"
       ],
-      "psstore": "https://www.playstation.com/zh-hans-hk/games/yakuza-like-a-dragon/",
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/JP0177-PPSA02690_00-LIKEADRAGON00000",
       "color": 3
     },
     {
@@ -3438,7 +3454,7 @@
         "PS4",
         "PS5"
       ],
-      "psstore": "https://store.playstation.com/zh-hans-hk/product/UP4744-PPSA08115_00-GLOOMHAVENMERC01",
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/UP4744-PPSA08115_00-GLOOMHAVENMERC01",
       "color": 3
     },
     {
@@ -4471,7 +4487,7 @@
         "PS4",
         "PS5"
       ],
-      "psstore": "https://www.playstation.com/zh-hans-hk/games/jurassic-world-evolution-2/",
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/EP2377-PPSA03286_00-JWEVOLUTION2AAAA",
       "color": 3
     },
     {
@@ -7337,7 +7353,7 @@
       "versions": [
         "PS4"
       ],
-      "psstore": "https://store.playstation.com/zh-hans-hk/product/EP4008-CUSA19326_00-RLSIEE0000000000",
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/EP4008-CUSA19326_00-RLSIEE0000000000",
       "color": 3
     },
     {
@@ -15432,7 +15448,7 @@
       "versions": [
         "PS4"
       ],
-      "psstore": "https://store.playstation.com/zh-hans-hk/product/UP1014-CUSA09973_00-ASIAESTMOONLOHSE",
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/UP1014-CUSA09973_00-ASIAESTMOONLOHSE",
       "color": 3
     },
     {
