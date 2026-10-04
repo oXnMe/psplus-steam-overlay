@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-03T19:20:56Z",
-  "count": 1538,
+  "updatedAt": "2026-10-04T19:46:00Z",
+  "count": 1534,
   "games": [
     {
       "recordId": "reczz28I0VZADCMd",
@@ -61,7 +61,7 @@
         "PS4",
         "PS5"
       ],
-      "psstore": "",
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/UP0102-PPSA38464_00-CLASSICMXCM00001",
       "color": 7
     },
     {
@@ -309,7 +309,7 @@
         "PS4",
         "PS5"
       ],
-      "psstore": "",
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/UP0102-PPSA38272_00-CLASSICONIMUSHA0",
       "color": 7
     },
     {
@@ -586,7 +586,7 @@
         "PS4",
         "PS5"
       ],
-      "psstore": "https://www.playstation.com/en-gb/games/mighty-morphin-power-rangers-ritas-rewind/",
+      "psstore": "https://store.playstation.com/en-us/product/UP7818-PPSA18528_00-0444976593126924",
       "color": 7
     },
     {
@@ -864,7 +864,7 @@
         "PS4",
         "PS5"
       ],
-      "psstore": "https://store.playstation.com/zh-hans-hk/product/UP0700-PPSA32510_00-SLUS004050000000",
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/UP0700-PPSA32510_00-SLUS004050000000",
       "color": 7
     },
     {
@@ -1606,7 +1606,7 @@
         "PS4",
         "PS5"
       ],
-      "psstore": "https://store.playstation.com/zh-hans-hk/product/UP0700-PPSA31372_00-SCUS943000000000",
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/UP0700-PPSA31372_00-SCUS943000000000",
       "color": 7
     },
     {
@@ -2046,7 +2046,7 @@
         "PS4",
         "PS5"
       ],
-      "psstore": "https://store.playstation.com/zh-hans-hk/product/UP8489-PPSA27718_00-0618689374962365",
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/UP8489-PPSA27718_00-0618689374962365",
       "color": 7
     },
     {
@@ -2655,7 +2655,7 @@
         "PS4",
         "PS5"
       ],
-      "psstore": "https://www.playstation.com/zh-hans-hk/games/resident-evil-2/",
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/UP0102-PPSA07813_00-CLASSICRE2000001",
       "color": 7
     },
     {
@@ -3013,7 +3013,7 @@
       "versions": [
         "PS5"
       ],
-      "psstore": "https://www.playstation.com/en-gb/games/new-world-aeternum/",
+      "psstore": "https://store.playstation.com/en-us/product/UP5267-PPSA07398_00-NWSTANDARDBUNDLE",
       "color": 7
     },
     {
@@ -3092,7 +3092,7 @@
         "PS4",
         "PS5"
       ],
-      "psstore": "https://store.playstation.com/zh-hans-hk/product/UP0922-PPSA17122_00-SLUS005350000000",
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/UP0922-PPSA28932_00-0611461640815149",
       "color": 7
     },
     {
@@ -3425,6 +3425,38 @@
       "color": 5
     },
     {
+      "recordId": "reczz28JI3LAwkLr",
+      "steamAppId": 2427430,
+      "tier": 2,
+      "month": "2025年5月",
+      "monthSort": "2025-05",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2025年5月20日",
+      "versions": [
+        "PS4",
+        "PS5"
+      ],
+      "psstore": "",
+      "color": 7
+    },
+    {
+      "recordId": "reczz28JI3LAxtiU",
+      "steamAppId": 1643320,
+      "tier": 2,
+      "month": "2025年5月",
+      "monthSort": "2025-05",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2025年5月20日",
+      "versions": [
+        "PS4",
+        "PS5"
+      ],
+      "psstore": "",
+      "color": 7
+    },
+    {
       "recordId": "recv83nQgyfbSH",
       "steamAppId": "s1323391",
       "tier": 2,
@@ -3469,7 +3501,7 @@
         "PS4",
         "PS5"
       ],
-      "psstore": "https://www.playstation.com/zh-hans-hk/games/humankind/",
+      "psstore": "https://www.playstation.com/zh-hans-hk/games/human-fall-flat/",
       "color": 7
     },
     {
@@ -5302,7 +5334,7 @@
         "PS4",
         "PS5"
       ],
-      "psstore": "https://www.playstation.com/zh-hans-hk/games/wild-card-football/",
+      "psstore": "https://store.playstation.com/en-us/product/UP6856-PPSA04392_00-DSYGAMEPS50000US",
       "color": 5
     },
     {
@@ -5991,7 +6023,7 @@
         "PS4",
         "PS5"
       ],
-      "psstore": "https://store.playstation.com/zh-hans-hk/product/UP8489-PPSA22453_00-0217126708396262",
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/UP8489-PPSA22453_00-0217126708396262",
       "color": 7
     },
     {
@@ -7794,15 +7826,15 @@
       "tier": 3,
       "month": "2023年12月",
       "monthSort": "2023-12",
-      "statusName": "在库",
-      "statusDisplay": "在库",
-      "statusDate": "2023年12月19日",
+      "statusName": "已出库",
+      "statusDisplay": "已出库",
+      "statusDate": "2026年9月29日",
       "versions": [
         "PS4",
         "PS5"
       ],
       "psstore": "https://store.playstation.com/zh-hans-hk/product/UP1082-PPSA14381_00-0570380917000461",
-      "color": 7
+      "color": 5
     },
     {
       "recordId": "recv83nQgyGLrf",
@@ -8287,7 +8319,7 @@
         "PS4",
         "PS5"
       ],
-      "psstore": "https://store.playstation.com/zh-hans-hk/product/HP0700-PPSA07706_00-TEKKEN6000000000",
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/HP0700-PPSA07706_00-TEKKEN6000000000",
       "color": 7
     },
     {
@@ -9145,7 +9177,7 @@
         "PS4",
         "PS5"
       ],
-      "psstore": "https://store.playstation.com/zh-hans-hk/product/UP9000-PPSA16427_00-SCUS943040000000",
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/UP9000-PPSA16427_00-SCUS943040000000",
       "color": 7
     },
     {
@@ -10833,7 +10865,7 @@
       "versions": [
         "PS4"
       ],
-      "psstore": "https://www.playstation.com/zh-hans-hk/games/nostraight-roads/",
+      "psstore": "https://store.playstation.com/zh-hant-hk/concept/10000448",
       "color": 7
     },
     {
@@ -11174,22 +11206,6 @@
         "PS5"
       ],
       "psstore": "https://store.playstation.com/zh-hans-hk/product/HP0700-PPSA07694_00-RIDGERACER200000",
-      "color": 7
-    },
-    {
-      "recordId": "recv83nQgy5MHn",
-      "steamAppId": null,
-      "tier": 3,
-      "month": "2022年12月",
-      "monthSort": "2022-12",
-      "statusName": "在库",
-      "statusDisplay": "在库",
-      "statusDate": "2022年12月20日",
-      "versions": [
-        "PS4",
-        "PS5"
-      ],
-      "psstore": "",
       "color": 7
     },
     {
@@ -11590,7 +11606,7 @@
       "versions": [
         "PS4"
       ],
-      "psstore": "https://www.playstation.com/zh-hans-hk/games/kingdom-hearts-hd-1-5-2-5-remix/",
+      "psstore": "https://store.playstation.com/zh-hans-hk/product/UP0082-CUSA05933_00-ASIA000000000000",
       "color": 5
     },
     {
@@ -11867,36 +11883,6 @@
       ],
       "psstore": "https://store.playstation.com/zh-hans-hk/product/UP9012-CUSA01846_00-ASIAUSF4DEV00104",
       "color": 5
-    },
-    {
-      "recordId": "recv83nQgyx73x",
-      "steamAppId": "234080",
-      "tier": 3,
-      "month": "2022年10月",
-      "monthSort": "2022-10",
-      "statusName": "在库",
-      "statusDisplay": "在库",
-      "statusDate": "2022年10月18日",
-      "versions": [
-        "PS4"
-      ],
-      "psstore": "",
-      "color": 7
-    },
-    {
-      "recordId": "recv83nQgy1wCr",
-      "steamAppId": "16300",
-      "tier": 3,
-      "month": "2022年10月",
-      "monthSort": "2022-10",
-      "statusName": "在库",
-      "statusDisplay": "在库",
-      "statusDate": "2022年10月18日",
-      "versions": [
-        "PS4"
-      ],
-      "psstore": "",
-      "color": 7
     },
     {
       "recordId": "recv83nQgy6Bbs",
@@ -12861,6 +12847,36 @@
       "color": 7
     },
     {
+      "recordId": "reczz28JHZy3nz02",
+      "steamAppId": 33230,
+      "tier": 2,
+      "month": "2022年7月",
+      "monthSort": "2022-07",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2022年7月19日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://store.playstation.com/zh-hans-hk/product/EP0001-CUSA04893_00-ASIA000000000000",
+      "color": 7
+    },
+    {
+      "recordId": "reczz28JHa21aaPb",
+      "steamAppId": 48190,
+      "tier": 2,
+      "month": "2022年7月",
+      "monthSort": "2022-07",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2022年7月19日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://store.playstation.com/zh-hans-hk/product/EP0001-CUSA04893_00-ASIA000000000000",
+      "color": 7
+    },
+    {
       "recordId": "recv83nQgyAwUg",
       "steamAppId": null,
       "tier": 2,
@@ -12872,7 +12888,7 @@
       "versions": [
         "PS4"
       ],
-      "psstore": "https://www.playstation.com/zh-hans-hk/games/assassins-creed-the-ezio-collection/",
+      "psstore": "https://store.playstation.com/zh-hans-hk/product/EP0001-CUSA04893_00-ASIA000000000000",
       "color": 7
     },
     {
@@ -13844,7 +13860,7 @@
       "versions": [
         "PS4"
       ],
-      "psstore": "https://www.playstation.com/zh-hans-hk/games/relicta/",
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/EP3617-CUSA17918_00-ERELICTAMAINRV00",
       "color": 5
     },
     {
@@ -14405,22 +14421,6 @@
       "color": 5
     },
     {
-      "recordId": "recva2UJpBtim7",
-      "steamAppId": "2215430",
-      "tier": 2,
-      "month": "2022年5月",
-      "monthSort": "2022-05",
-      "statusName": "在库",
-      "statusDisplay": "在库",
-      "statusDate": "2022年5月17日",
-      "versions": [
-        "PS4",
-        "PS5"
-      ],
-      "psstore": "https://www.playstation.com/zh-hans-hk/games/ghost-of-tsushima/",
-      "color": 7
-    },
-    {
       "recordId": "recva2UW3ziLhz",
       "steamAppId": "1088850",
       "tier": 2,
@@ -14678,6 +14678,7 @@
       "statusDisplay": "在库",
       "statusDate": "2022年5月17日",
       "versions": [
+        "PS4",
         "PS5"
       ],
       "psstore": "https://www.playstation.com/zh-hans-hk/games/ghost-of-tsushima/",
@@ -14836,21 +14837,6 @@
       "color": 7
     },
     {
-      "recordId": "recvozuy1r7tfT",
-      "steamAppId": "477160",
-      "tier": 2,
-      "month": "2022年5月",
-      "monthSort": "2022-05",
-      "statusName": "在库",
-      "statusDisplay": "在库",
-      "statusDate": "2022年5月17日",
-      "versions": [
-        "PS5"
-      ],
-      "psstore": "https://www.playstation.com/zh-hans-hk/games/human-fall-flat/",
-      "color": 7
-    },
-    {
       "recordId": "recvozuy1rTLX8",
       "steamAppId": "679110",
       "tier": 2,
@@ -14923,21 +14909,6 @@
         "PS4"
       ],
       "psstore": "https://store.playstation.com/zh-hans-hk/product/JP0720-CUSA19264_00-YWY1GAME00000000",
-      "color": 7
-    },
-    {
-      "recordId": "recvozuy1r1t5N",
-      "steamAppId": "1817190",
-      "tier": 2,
-      "month": "2022年5月",
-      "monthSort": "2022-05",
-      "statusName": "在库",
-      "statusDisplay": "在库",
-      "statusDate": "2022年5月17日",
-      "versions": [
-        "PS5"
-      ],
-      "psstore": "https://www.playstation.com/zh-hans-hk/games/marvels-spider-man-miles-morales/",
       "color": 7
     },
     {
@@ -15027,7 +14998,7 @@
       "versions": [
         "PS4"
       ],
-      "psstore": "https://www.playstation.com/zh-hans-hk/games/desperados-iii/",
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/EP4389-CUSA11112_00-THQNORDEUDESP000",
       "color": 7
     },
     {
@@ -15588,21 +15559,6 @@
       "color": 7
     },
     {
-      "recordId": "recvozuy1r18GS",
-      "steamAppId": "1971870",
-      "tier": 2,
-      "month": "2022年5月",
-      "monthSort": "2022-05",
-      "statusName": "在库",
-      "statusDisplay": "在库",
-      "statusDate": "2022年5月17日",
-      "versions": [
-        "PS5"
-      ],
-      "psstore": "https://www.playstation.com/zh-hans-hk/games/mortal-kombat-1/",
-      "color": 7
-    },
-    {
       "recordId": "recvozuy1rNVhM",
       "steamAppId": null,
       "tier": 2,
@@ -15705,21 +15661,6 @@
         "PS4"
       ],
       "psstore": "https://store.playstation.com/zh-hans-hk/product/JP0001-CUSA11760_00-ASIA000000000000",
-      "color": 7
-    },
-    {
-      "recordId": "recvozuy1rYsXH",
-      "steamAppId": "281990",
-      "tier": 2,
-      "month": "2022年5月",
-      "monthSort": "2022-05",
-      "statusName": "在库",
-      "statusDisplay": "在库",
-      "statusDate": "2022年5月17日",
-      "versions": [
-        "PS4"
-      ],
-      "psstore": "https://store.playstation.com/zh-hans-hk/product/UP4139-PPSA27597_00-STELLARISBASEPS5",
       "color": 7
     },
     {
@@ -21564,7 +21505,7 @@
       "versions": [
         "PS3"
       ],
-      "psstore": "https://store.playstation.com/zh-hans-hk/product/UP9000-PPSA16427_00-SCUS943040000000",
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/UP9000-PPSA16427_00-SCUS943040000000",
       "color": 5
     },
     {
