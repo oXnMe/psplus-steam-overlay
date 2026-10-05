@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-04T19:46:00Z",
+  "updatedAt": "2026-10-05T22:51:52Z",
   "count": 1534,
   "games": [
     {
@@ -8,14 +8,14 @@
       "tier": 1,
       "month": "2026年10月",
       "monthSort": "2026-10",
-      "statusName": "即将会免",
-      "statusDisplay": "即将会免",
-      "statusDate": "2026年10月6日",
+      "statusName": "领取中",
+      "statusDisplay": "会免领取中",
+      "statusDate": "2026年11月3日",
       "versions": [
         "PS5"
       ],
-      "psstore": "",
-      "color": 2
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/UP0006-PPSA24662_00-F12025PS5GAME000",
+      "color": 7
     },
     {
       "recordId": "reczz28I0VZADvix",
@@ -23,14 +23,14 @@
       "tier": 1,
       "month": "2026年10月",
       "monthSort": "2026-10",
-      "statusName": "即将会免",
-      "statusDisplay": "即将会免",
-      "statusDate": "2026年10月6日",
+      "statusName": "领取中",
+      "statusDisplay": "会免领取中",
+      "statusDate": "2026年11月3日",
       "versions": [
         "PS5"
       ],
-      "psstore": "",
-      "color": 2
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/EP4291-PPSA16357_00-0286411811680806",
+      "color": 7
     },
     {
       "recordId": "reczz28I0VZAEn3j",
@@ -38,15 +38,15 @@
       "tier": 1,
       "month": "2026年10月",
       "monthSort": "2026-10",
-      "statusName": "即将会免",
-      "statusDisplay": "即将会免",
-      "statusDate": "2026年10月6日",
+      "statusName": "领取中",
+      "statusDisplay": "会免领取中",
+      "statusDate": "2026年11月3日",
       "versions": [
         "PS4",
         "PS5"
       ],
-      "psstore": "",
-      "color": 2
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/HP5846-PPSA19406_00-EDFWORLDBROTHER2",
+      "color": 7
     },
     {
       "recordId": "recvuK2foD2NFO",
