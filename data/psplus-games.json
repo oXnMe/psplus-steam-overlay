@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-05T22:51:52Z",
+  "updatedAt": "2026-10-06T21:09:19Z",
   "count": 1534,
   "games": [
     {
@@ -240,15 +240,15 @@
       "tier": 1,
       "month": "2026年9月",
       "monthSort": "2026-09",
-      "statusName": "领取中",
-      "statusDisplay": "会免领取中",
+      "statusName": "截止领取",
+      "statusDisplay": "会免过",
       "statusDate": "2026年10月6日",
       "versions": [
         "PS4",
         "PS5"
       ],
       "psstore": "https://store.playstation.com/zh-hant-hk/product/UP4363-PPSA17232_00-SNIPERELITERES00",
-      "color": 7
+      "color": 5
     },
     {
       "recordId": "recvts5H15f4cd",
@@ -256,14 +256,14 @@
       "tier": 1,
       "month": "2026年9月",
       "monthSort": "2026-09",
-      "statusName": "领取中",
-      "statusDisplay": "会免领取中",
+      "statusName": "截止领取",
+      "statusDisplay": "会免过",
       "statusDate": "2026年10月6日",
       "versions": [
         "PS5"
       ],
       "psstore": "https://store.playstation.com/zh-hant-hk/product/UP9000-PPSA30630_00-MLBTHESHOW26PLUS",
-      "color": 7
+      "color": 5
     },
     {
       "recordId": "recvtnXMCzB8Gw",
@@ -271,15 +271,15 @@
       "tier": 1,
       "month": "2026年9月",
       "monthSort": "2026-09",
-      "statusName": "领取中",
-      "statusDisplay": "会免领取中",
+      "statusName": "截止领取",
+      "statusDisplay": "会免过",
       "statusDate": "2026年10月6日",
       "versions": [
         "PS4",
         "PS5"
       ],
       "psstore": "https://store.playstation.com/zh-hant-hk/product/UP7742-PPSA29413_00-0632159817352246",
-      "color": 7
+      "color": 5
     },
     {
       "recordId": "recvtnV4nQPXbM",
@@ -287,14 +287,14 @@
       "tier": 1,
       "month": "2026年9月",
       "monthSort": "2026-09",
-      "statusName": "领取中",
-      "statusDisplay": "会免领取中",
+      "statusName": "截止领取",
+      "statusDisplay": "会免过",
       "statusDate": "2026年10月6日",
       "versions": [
         "PS4"
       ],
       "psstore": "https://store.playstation.com/zh-hant-hk/product/EP0900-CUSA29547_00-4103461541053748",
-      "color": 7
+      "color": 5
     },
     {
       "recordId": "recvs8MCY47eRa",
@@ -3249,7 +3249,7 @@
         "PS4",
         "PS5"
       ],
-      "psstore": "https://store.playstation.com/zh-hans-hk/product/JP9200-PPSA02411_00-D2Y8LEGACYBDL001",
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/JP9200-PPSA02411_00-D2Y8LEGACYBDL001",
       "color": 7
     },
     {
@@ -3327,7 +3327,7 @@
         "PS4",
         "PS5"
       ],
-      "psstore": "https://www.playstation.com/zh-hans-hk/games/destiny-2/the-final-shape/",
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/JP9200-PPSA02411_00-D2FSBUNDLE000001",
       "color": 5
     },
     {
@@ -6670,7 +6670,7 @@
         "PS4",
         "PS5"
       ],
-      "psstore": "",
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/JP9200-PPSA02411_00-D2LFBUNDLE000001",
       "color": 5
     },
     {
@@ -7232,7 +7232,7 @@
         "PS4",
         "PS5"
       ],
-      "psstore": "",
+      "psstore": "https://store.playstation.com/zh-hans-hk/product/JP9200-PPSA02411_00-D2WITCHQUEEN0001",
       "color": 5
     },
     {
