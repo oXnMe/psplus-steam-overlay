@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-08T21:26:39Z",
-  "count": 1534,
+  "updatedAt": "2026-10-09T21:11:02Z",
+  "count": 1581,
   "games": [
     {
       "recordId": "reczz28I0VZADCMd",
@@ -92,6 +92,21 @@
         "PS4"
       ],
       "psstore": "https://store.playstation.com/zh-hant-hk/product/UP2047-CUSA00624_00-ASIA0000FULLGAME",
+      "color": 7
+    },
+    {
+      "recordId": "reczz28LDB7Y9oVT",
+      "steamAppId": 286690,
+      "tier": 3,
+      "month": "2026年9月",
+      "monthSort": "2026-09",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2026年9月15日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/UP2047-CUSA00683_00-ASIA0000FULLGAME",
       "color": 7
     },
     {
@@ -2893,6 +2908,54 @@
       "color": 7
     },
     {
+      "recordId": "reczz28LDB7Y9JN7",
+      "steamAppId": 217200,
+      "tier": 3,
+      "month": "2025年7月",
+      "monthSort": "2025-07",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2025年7月15日",
+      "versions": [
+        "PS4",
+        "PS5"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/EP4064-CUSA33245_00-SLES022170000000",
+      "color": 7
+    },
+    {
+      "recordId": "reczz28LDB7YA9Vj",
+      "steamAppId": 270910,
+      "tier": 3,
+      "month": "2025年7月",
+      "monthSort": "2025-07",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2025年7月15日",
+      "versions": [
+        "PS4",
+        "PS5"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/EP4064-PPSA07310_00-SLES038040000000",
+      "color": 7
+    },
+    {
+      "recordId": "reczz28LDB7YBGnk",
+      "steamAppId": 70640,
+      "tier": 3,
+      "month": "2025年7月",
+      "monthSort": "2025-07",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2025年7月15日",
+      "versions": [
+        "PS4",
+        "PS5"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/EP4064-PPSA07306_00-SLES001190000000",
+      "color": 7
+    },
+    {
       "recordId": "recv83nQgyhVFN",
       "steamAppId": "1091500",
       "tier": 2,
@@ -3093,6 +3156,22 @@
         "PS5"
       ],
       "psstore": "https://store.playstation.com/zh-hant-hk/product/UP0922-PPSA28932_00-0611461640815149",
+      "color": 7
+    },
+    {
+      "recordId": "reczz28LDB7Y8LE8",
+      "steamAppId": 258180,
+      "tier": 3,
+      "month": "2025年6月",
+      "monthSort": "2025-06",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2025年6月17日",
+      "versions": [
+        "PS4",
+        "PS5"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/UP8490-PPSA27664_00-0241577075525214",
       "color": 7
     },
     {
@@ -3832,6 +3911,118 @@
       "color": 7
     },
     {
+      "recordId": "reczz28LDB7Y5Yup",
+      "steamAppId": 3339670,
+      "tier": 3,
+      "month": "2025年3月",
+      "monthSort": "2025-03",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2025年3月18日",
+      "versions": [
+        "PS4",
+        "PS5"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/HP0507-PPSA08000_00-7244803009329808",
+      "color": 7
+    },
+    {
+      "recordId": "reczz28LDB7Y7mR2",
+      "steamAppId": 1799370,
+      "tier": 3,
+      "month": "2025年3月",
+      "monthSort": "2025-03",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2025年3月18日",
+      "versions": [
+        "PS4",
+        "PS5"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/EP9000-PPSA06359_00-SCES000030000000",
+      "color": 7
+    },
+    {
+      "recordId": "reczz28LDB7Y8soG",
+      "steamAppId": null,
+      "tier": 3,
+      "month": "2025年3月",
+      "monthSort": "2025-03",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2025年3月18日",
+      "versions": [
+        "PS4",
+        "PS5"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/EP9000-PPSA06356_00-SCES008660000000",
+      "color": 7
+    },
+    {
+      "recordId": "reczz28LDB7YB2ts",
+      "steamAppId": 5318720,
+      "tier": 3,
+      "month": "2025年3月",
+      "monthSort": "2025-03",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2025年3月18日",
+      "versions": [
+        "PS4",
+        "PS5"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/UP1082-PPSA07364_00-6500186936636096",
+      "color": 7
+    },
+    {
+      "recordId": "reczz28LDB7Y9Jd0",
+      "steamAppId": null,
+      "tier": 3,
+      "month": "2025年3月",
+      "monthSort": "2025-03",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2025年3月18日",
+      "versions": [
+        "PS4",
+        "PS5"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/HP9000-PPSA08184_00-NPHG000130000000",
+      "color": 7
+    },
+    {
+      "recordId": "reczz28LDB7YBiCf",
+      "steamAppId": 520120,
+      "tier": 3,
+      "month": "2025年3月",
+      "monthSort": "2025-03",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2025年3月18日",
+      "versions": [
+        "PS4",
+        "PS5"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/UP9000-PPSA06322_00-SCUS942400000000",
+      "color": 7
+    },
+    {
+      "recordId": "reczz28LDB7YCjUg",
+      "steamAppId": 2306790,
+      "tier": 3,
+      "month": "2025年3月",
+      "monthSort": "2025-03",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2025年3月18日",
+      "versions": [
+        "PS4",
+        "PS5"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/EP9000-PPSA06350_00-SCES003210000000",
+      "color": 7
+    },
+    {
       "recordId": "recv83nQgyKUsy",
       "steamAppId": null,
       "tier": 2,
@@ -4033,6 +4224,54 @@
         "PS5"
       ],
       "psstore": "https://store.playstation.com/zh-hans-hk/product/UP9000-PPSA23797_00-SLUS204630000000",
+      "color": 7
+    },
+    {
+      "recordId": "reczz28LDB7YClUO",
+      "steamAppId": 1126750,
+      "tier": 3,
+      "month": "2025年2月",
+      "monthSort": "2025-02",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2025年2月18日",
+      "versions": [
+        "PS4",
+        "PS5"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/HP0700-PPSA07718_00-MRDRILLER0000000",
+      "color": 7
+    },
+    {
+      "recordId": "reczz28LDB7YCBrp",
+      "steamAppId": 207112,
+      "tier": 3,
+      "month": "2025年2月",
+      "monthSort": "2025-02",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2025年2月18日",
+      "versions": [
+        "PS4",
+        "PS5"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/HP0700-PPSA07698_00-SLUS007970000000",
+      "color": 7
+    },
+    {
+      "recordId": "reczz28LDB7Y98aL",
+      "steamAppId": 3597580,
+      "tier": 3,
+      "month": "2025年2月",
+      "monthSort": "2025-02",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2025年2月18日",
+      "versions": [
+        "PS4",
+        "PS5"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/HP0700-PPSA07702_00-TEKKEN2000000000",
       "color": 7
     },
     {
@@ -4738,6 +4977,22 @@
         "PS5"
       ],
       "psstore": "https://store.playstation.com/zh-hans-hk/product/UP8489-PPSA24268_00-0200966777747783",
+      "color": 7
+    },
+    {
+      "recordId": "reczz28LDB7Y9B3o",
+      "steamAppId": 2907870,
+      "tier": 3,
+      "month": "2024年11月",
+      "monthSort": "2024-11",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2024年11月19日",
+      "versions": [
+        "PS4",
+        "PS5"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/UP0102-PPSA07811_00-CLASSICREDC00001",
       "color": 7
     },
     {
@@ -8137,6 +8392,22 @@
       ],
       "psstore": "https://www.playstation.com/zh-hans-hk/games/klonoa-phantasy-reverie-series/",
       "color": 5
+    },
+    {
+      "recordId": "reczz28LDB7Y6P51",
+      "steamAppId": 1034860,
+      "tier": 3,
+      "month": "2023年11月",
+      "monthSort": "2023-11",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2023年11月21日",
+      "versions": [
+        "PS4",
+        "PS5"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/JP0184-CUSA43007_00-0451798479123793",
+      "color": 7
     },
     {
       "recordId": "recv83nQgyO7nf",
@@ -11790,7 +12061,22 @@
       "versions": [
         "PS4"
       ],
-      "psstore": "https://www.playstation.com/zh-hans-hk/games/lego-harry-potter-collection/",
+      "psstore": "https://store.playstation.com/zh-hans-hk/product/UP1018-CUSA05954_00-ASIA000000000000",
+      "color": 5
+    },
+    {
+      "recordId": "reczz28L9etczhXu",
+      "steamAppId": 204120,
+      "tier": 1,
+      "month": "2022年11月",
+      "monthSort": "2022-11",
+      "statusName": "截止领取",
+      "statusDisplay": "会免过",
+      "statusDate": "2022年12月6日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://store.playstation.com/zh-hans-hk/product/UP1018-CUSA05954_00-ASIA000000000000",
       "color": 5
     },
     {
@@ -13241,6 +13527,276 @@
       ],
       "psstore": "https://www.playstation.com/zh-hans-hk/games/borderlands-the-handsome-collection/",
       "color": 5
+    },
+    {
+      "recordId": "reczz28LDB7Y7zYi",
+      "steamAppId": 2322010,
+      "tier": 3,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2022年5月17日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/HP9000-CUSA01740_00-0000GODOFWAR3PS4",
+      "color": 7
+    },
+    {
+      "recordId": "reczz28LDB7Y70B3",
+      "steamAppId": 960910,
+      "tier": 3,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2022年5月17日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/HP9000-CUSA02567_00-HRPS400000000001",
+      "color": 7
+    },
+    {
+      "recordId": "reczz28LDB7Y5Ikw",
+      "steamAppId": 960990,
+      "tier": 3,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2022年5月17日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/HP9000-CUSA00494_00-GBEYONDTWO000001",
+      "color": 7
+    },
+    {
+      "recordId": "reczz28LDB7Y8Mo2",
+      "steamAppId": 2531310,
+      "tier": 3,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2022年5月17日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/HP9000-CUSA00559_00-THELASTOFUS00000",
+      "color": 7
+    },
+    {
+      "recordId": "reczz28LDB7Y5pZu",
+      "steamAppId": 1715130,
+      "tier": 3,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2022年5月17日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/EP4291-CUSA18671_00-CRYSISREMASTERED",
+      "color": 7
+    },
+    {
+      "recordId": "reczz28LDB7Y84oU",
+      "steamAppId": 1344840,
+      "tier": 3,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2022年5月17日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/HP9000-CUSA08423_00-SCKA200400000001",
+      "color": 7
+    },
+    {
+      "recordId": "reczz28LDB7Y7AVW",
+      "steamAppId": 1291680,
+      "tier": 3,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2022年5月17日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/HP9000-CUSA08422_00-SCKA200100000001",
+      "color": 7
+    },
+    {
+      "recordId": "reczz28LDB7Y4vsX",
+      "steamAppId": 396900,
+      "tier": 3,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2022年5月17日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/UP9000-CUSA07842_00-ASIASCUS97429001",
+      "color": 7
+    },
+    {
+      "recordId": "reczz28LDB7Y68Jx",
+      "steamAppId": null,
+      "tier": 3,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2022年5月17日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/HP9000-CUSA07182_00-UCUS986620000001",
+      "color": 7
+    },
+    {
+      "recordId": "reczz28LDB7Y8SPX",
+      "steamAppId": null,
+      "tier": 3,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2022年5月17日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/HP9000-CUSA07183_00-LOCOROCO2HD00001",
+      "color": 7
+    },
+    {
+      "recordId": "reczz28LDB7Y6trM",
+      "steamAppId": 851670,
+      "tier": 3,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2022年5月17日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/UP0751-CUSA11624_00-ASIA000000000000",
+      "color": 7
+    },
+    {
+      "recordId": "reczz28LDB7YCUPm",
+      "steamAppId": 618970,
+      "tier": 3,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2022年5月17日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/EP4008-CUSA07582_00-ASIA000000000000",
+      "color": 7
+    },
+    {
+      "recordId": "reczz28LDB7YAdTk",
+      "steamAppId": 2383200,
+      "tier": 3,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2022年5月17日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/HP9000-CUSA07184_00-UCUS987110000001",
+      "color": 7
+    },
+    {
+      "recordId": "reczz28LDB7YCnKh",
+      "steamAppId": 2383200,
+      "tier": 3,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2022年5月17日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/HP9000-CUSA08174_00-UCES011770000001",
+      "color": 7
+    },
+    {
+      "recordId": "reczz28LDB7Y9hVf",
+      "steamAppId": 2419090,
+      "tier": 3,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2022年5月17日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/UP1082-CUSA03472_00-SLUS204200000001",
+      "color": 7
+    },
+    {
+      "recordId": "reczz28LDB7YB8Ii",
+      "steamAppId": 1774580,
+      "tier": 3,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2022年5月17日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/UP1082-CUSA03473_00-SLUS202930000001",
+      "color": 7
+    },
+    {
+      "recordId": "reczz28LDB7Y9Q6Q",
+      "steamAppId": 4078430,
+      "tier": 3,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2022年5月17日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/UP1082-CUSA03474_00-SLUS202680000001",
+      "color": 7
+    },
+    {
+      "recordId": "reczz28LDB7YCxYW",
+      "steamAppId": 1888930,
+      "tier": 3,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2022年5月17日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/HP9000-CUSA00560_00-THELASTOFUS00000",
+      "color": 7
     },
     {
       "recordId": "recvsBRMaA3Q4L",
@@ -15905,6 +16461,173 @@
         "PS4"
       ],
       "psstore": "https://store.playstation.com/zh-hans-hk/product/UP4134-CUSA00329_00-ASIA000000000000",
+      "color": 7
+    },
+    {
+      "recordId": "reczz28LD8T4eV9k",
+      "steamAppId": 2369470,
+      "tier": 2,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2022年5月17日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/EP0001-CUSA10326_00-ASIA000000000000",
+      "color": 7
+    },
+    {
+      "recordId": "reczz28LD8T4gPH7",
+      "steamAppId": 219150,
+      "tier": 2,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2022年5月17日",
+      "versions": [
+        "PS4",
+        "PS5"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/UP3643-PPSA09682_00-4803096615716929",
+      "color": 7
+    },
+    {
+      "recordId": "reczz28LD8T4e1dM",
+      "steamAppId": 313690,
+      "tier": 2,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2022年5月17日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/UP1018-CUSA00580_00-ASIA000000000000",
+      "color": 7
+    },
+    {
+      "recordId": "reczz28LD8T4dJGV",
+      "steamAppId": 859570,
+      "tier": 2,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2022年5月17日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/EP0096-CUSA25165_00-0482907501575646",
+      "color": 7
+    },
+    {
+      "recordId": "reczz28LD8T4dHw3",
+      "steamAppId": 213670,
+      "tier": 2,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2022年5月17日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/EP0001-CUSA04695_00-ASIA000000000000",
+      "color": 7
+    },
+    {
+      "recordId": "reczz28LD8T4ep2o",
+      "steamAppId": 267530,
+      "tier": 2,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2022年5月17日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/UP1018-CUSA00084_00-ASIA00000000GAME",
+      "color": 7
+    },
+    {
+      "recordId": "reczz28LD8T4dvfm",
+      "steamAppId": 644830,
+      "tier": 2,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2022年5月17日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/UP4133-CUSA12564_00-ASIAFULLGAME0000",
+      "color": 7
+    },
+    {
+      "recordId": "reczz28LD8T4fG51",
+      "steamAppId": 1011670,
+      "tier": 2,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2022年5月17日",
+      "versions": [
+        "PS5",
+        "PS4"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/EB1016-PPSA28855_00-TOTALLYRELIABLE1",
+      "color": 7
+    },
+    {
+      "recordId": "reczz28LD8T4fc7k",
+      "steamAppId": 641080,
+      "tier": 2,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2022年5月17日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/JP0001-CUSA09595_00-ASIAFULLGAME0000",
+      "color": 7
+    },
+    {
+      "recordId": "reczz28LD8T4fMZZ",
+      "steamAppId": 774241,
+      "tier": 2,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2022年5月17日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/EP4008-CUSA12718_00-ASIAFULLGAME0000",
+      "color": 7
+    },
+    {
+      "recordId": "reczz28LD8T4hPGa",
+      "steamAppId": 4486290,
+      "tier": 2,
+      "month": "2022年5月",
+      "monthSort": "2022-05",
+      "statusName": "在库",
+      "statusDisplay": "在库",
+      "statusDate": "2022年5月17日",
+      "versions": [
+        "PS5"
+      ],
+      "psstore": "https://store.playstation.com/zh-hant-hk/product/EP4008-PPSA01445_00-WHCBSIEE00000000",
       "color": 7
     },
     {
