@@ -388,7 +388,12 @@ def load_previous():
 
 
 def load_seed(path):
-    """Load the proofread recordId -> steamAppId mapping (verbatim; 's<number>' = sub id, '' = no Steam match)."""
+    """Load the proofread recordId -> steamAppId mapping (verbatim).
+
+    Format: plain number = Steam app id; 's<number>' = sub id; 'b<number>' = bundle id;
+    '' (empty) = human-confirmed no Steam match (never auto-searched). All non-numeric
+    prefixes are preserved verbatim into psplus-games.json for the userscript to route.
+    """
     if not path:
         return {}
     try:

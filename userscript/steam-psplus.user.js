@@ -2,7 +2,7 @@
 // @name         Steam × PS Plus 会免游戏显示
 // @icon         https://store.steampowered.com/favicon.ico
 // @namespace    https://github.com/oXnMe/psplus-steam-overlay
-// @version      1.1.9
+// @version      1.2.0
 // @description  在 Steam 显示 PS Plus 会免/入库状态。
 // @author       oXnMe
 // @license      MIT
@@ -137,25 +137,30 @@ function getIdsFromUrl(href) {
   const bundle = /\/bundle\/(\d+)/.exec(url);
   return {
     appId: app ? app[1] : null,
-    subId: sub ? sub[1] : (bundle ? bundle[1] : null),
+    subId: sub ? sub[1] : null,
+    bundleId: bundle ? bundle[1] : null,
   };
 }
 
 function buildMaps(games) {
   const app = {};
   const sub = {};
+  const bundle = {};
   games.forEach(function (g) {
     const id = String(g.steamAppId || "");
     if (!id) return;
     if (id.charAt(0) === "s") {
       if (!sub[id]) sub[id] = [];
       sub[id].push(g);
+    } else if (id.charAt(0) === "b") {
+      if (!bundle[id]) bundle[id] = [];
+      bundle[id].push(g);
     } else {
       if (!app[id]) app[id] = [];
       app[id].push(g);
     }
   });
-  return { app: app, sub: sub };
+  return { app: app, sub: sub, bundle: bundle };
 }
 
 function loadData() {
@@ -216,10 +221,21 @@ function bannerDate(m) {
   return lbl ? lbl + "：" + m.statusDate : m.statusDate;
 }
 
-function renderStoreBanners(appMap, subMap) {
+function renderStoreBanners(appMap, subMap, bundleMap) {
   const ids = getIdsFromUrl();
-  const key = ids.appId || ("s" + ids.subId);
-  const matches = ids.appId ? (appMap[key] || []) : (subMap[key] || []);
+  let key, matches;
+  if (ids.appId) {
+    key = ids.appId;
+    matches = appMap[key] || [];
+  } else if (ids.subId) {
+    key = "s" + ids.subId;
+    matches = subMap[key] || [];
+  } else if (ids.bundleId) {
+    key = "b" + ids.bundleId;
+    matches = bundleMap[key] || [];
+  } else {
+    return;
+  }
   if (!matches.length) return;
 
   const sortedMatches = matches.slice().sort(function (a, b) {
@@ -434,7 +450,7 @@ function observe(appMap, scanner) {
     const maps = buildMaps(data.games);
 
     if (/^\/(?:app|sub|bundle)\//.test(location.pathname)) {
-      renderStoreBanners(maps.app, maps.sub);
+      renderStoreBanners(maps.app, maps.sub, maps.bundle);
     }
     scanCards(maps.app);
     observe(maps.app, scanCards);
