@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 
+# Caches (ludoteca.dev bulk equivalence table lives here)
+.cache/
+
 # Editor / OS
 .DS_Store
 .idea/
