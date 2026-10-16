@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-10-15T19:59:43Z",
+  "updatedAt": "2026-10-16T19:39:18Z",
   "count": 1590,
   "games": [
     {
       "recordId": "reczz28NLPDp2HOL",
-      "steamAppId": 4249140,
+      "steamAppId": "4249140",
       "tier": 3,
       "month": "2026年10月",
       "monthSort": "2026-10",
@@ -20,7 +20,7 @@
     },
     {
       "recordId": "reczz28NLR3w6Aed",
-      "steamAppId": 1368820,
+      "steamAppId": "1368820",
       "tier": 3,
       "month": "2026年10月",
       "monthSort": "2026-10",
@@ -36,7 +36,7 @@
     },
     {
       "recordId": "reczz28NLPDow3xS",
-      "steamAppId": 1941540,
+      "steamAppId": "1941540",
       "tier": 2,
       "month": "2026年10月",
       "monthSort": "2026-10",
@@ -51,7 +51,7 @@
     },
     {
       "recordId": "reczz28NLPDoxCCI",
-      "steamAppId": 2420110,
+      "steamAppId": "2420110",
       "tier": 2,
       "month": "2026年10月",
       "monthSort": "2026-10",
@@ -67,7 +67,7 @@
     },
     {
       "recordId": "reczz28NLPDozgk0",
-      "steamAppId": 3247750,
+      "steamAppId": "3247750",
       "tier": 2,
       "month": "2026年10月",
       "monthSort": "2026-10",
@@ -82,7 +82,7 @@
     },
     {
       "recordId": "reczz28NLPDp34Hj",
-      "steamAppId": 1817490,
+      "steamAppId": "1817490",
       "tier": 2,
       "month": "2026年10月",
       "monthSort": "2026-10",
@@ -98,7 +98,7 @@
     },
     {
       "recordId": "reczz28NLPDozvKy",
-      "steamAppId": 2863640,
+      "steamAppId": "2863640",
       "tier": 2,
       "month": "2026年10月",
       "monthSort": "2026-10",
@@ -113,7 +113,7 @@
     },
     {
       "recordId": "reczz28NLPDp2PCl",
-      "steamAppId": 740130,
+      "steamAppId": "740130",
       "tier": 2,
       "month": "2026年10月",
       "monthSort": "2026-10",
@@ -129,7 +129,7 @@
     },
     {
       "recordId": "reczz28NLPDp073F",
-      "steamAppId": 3555990,
+      "steamAppId": "2581370",
       "tier": 2,
       "month": "2026年10月",
       "monthSort": "2026-10",
@@ -4258,7 +4258,7 @@
     },
     {
       "recordId": "recv83nQgypSKz",
-      "steamAppId": "2233280",
+      "steamAppId": "837880",
       "tier": 2,
       "month": "2025年3月",
       "monthSort": "2025-03",
@@ -13304,7 +13304,7 @@
     },
     {
       "recordId": "recv83nQgyAwUg",
-      "steamAppId": null,
+      "steamAppId": "201870",
       "tier": 2,
       "month": "2022年7月",
       "monthSort": "2022-07",
@@ -22648,7 +22648,7 @@
     },
     {
       "recordId": "recv841yeSvLEI",
-      "steamAppId": "295790",
+      "steamAppId": "210870",
       "tier": 1,
       "month": "2015年6月",
       "monthSort": "2015-06",
@@ -24168,7 +24168,7 @@
     },
     {
       "recordId": "recv841yeSWrq9",
-      "steamAppId": "264400",
+      "steamAppId": "s50334",
       "tier": 1,
       "month": "2014年3月",
       "monthSort": "2014-03",
@@ -24260,7 +24260,7 @@
     },
     {
       "recordId": "recv841yeSF0Lk",
-      "steamAppId": "1580790",
+      "steamAppId": null,
       "tier": 1,
       "month": "2014年2月",
       "monthSort": "2014-02",
@@ -24291,7 +24291,7 @@
     },
     {
       "recordId": "recv841yeS1lBG",
-      "steamAppId": "228400",
+      "steamAppId": null,
       "tier": 1,
       "month": "2014年2月",
       "monthSort": "2014-02",
@@ -24352,7 +24352,7 @@
     },
     {
       "recordId": "recv841yeSvUR7",
-      "steamAppId": "243780",
+      "steamAppId": null,
       "tier": 1,
       "month": "2014年1月",
       "monthSort": "2014-01",
