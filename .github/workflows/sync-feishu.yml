@@ -42,6 +42,16 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Compute ISO week (ludoteca cache key)
+        id: week
+        run: echo "week=$(date -u +%G-%V)" >> "$GITHUB_OUTPUT"
+
+      - name: Cache ludoteca equivalence table
+        uses: actions/cache@v4
+        with:
+          path: .cache/ludoteca
+          key: ludoteca-equiv-${{ steps.week.outputs.week }}
+
       - name: Run Feishu -> JSON sync
         env:
           FEISHU_APP_ID: ${{ secrets.FEISHU_APP_ID }}

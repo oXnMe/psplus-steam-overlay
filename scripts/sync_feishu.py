@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Sync the Feishu PS Plus catalog to a static JSON consumed by the userscript."""
+"""Sync the Feishu PS Plus catalog to a static JSON consumed by the userscript.
+
+Each record's Steam app id is resolved with this precedence: proofread
+``data.csv`` seed > previous cached value > ludoteca.dev curated cross-store
+table > Steam name search filtered to real games (dlc/tool/demo rejected).
+"""
 import argparse
 import csv
 import datetime
@@ -14,6 +19,16 @@ import unicodedata
 import urllib.error
 import urllib.parse
 import urllib.request
+
+try:
+    import ludoteca
+except ImportError:
+    # Allow running as `python -m scripts.sync_feishu` from the repo root.
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    try:
+        import ludoteca
+    except ImportError:
+        ludoteca = None
 
 FEISHU_HOST = "https://open.feishu.cn"
 STEAM_HOST = "https://store.steampowered.com"
@@ -316,20 +331,30 @@ def _search_web_once(term, lang, cc):
     return parse_search_html(body)
 
 
-def search_steam_web(term, lang):
-    """Search the full /search/?term= results page (cc=us first, then cc=cn); exact-name match else top result."""
-    primary_cc = "us"
-    secondary_cc = "cn"
+def search_steam_candidates(term, lang, max_candidates=4):
+    """Ranked Steam search candidates (exact normalized-name matches first).
+
+    Tries the results page (cc=us, then cc=cn); falls back to storesearch only
+    when the page is empty. Deduped by app id, capped at ``max_candidates``.
+    """
     q = normalize(term)
-    for cc in (primary_cc, secondary_cc):
-        items = _search_web_once(term, lang, cc)
-        if not items:
+    items = _search_web_once(term, lang, "us")
+    if not items:
+        items = _search_web_once(term, lang, "cn")
+    if not items:
+        it = search_steam_storesearch(term, lang)
+        return [it] if it else []
+    exact = [it for it in items if normalize(it.get("name", "")) == q]
+    rest = [it for it in items if normalize(it.get("name", "")) != q]
+    out, seen = [], set()
+    for it in exact + rest:
+        if it["id"] in seen:
             continue
-        for it in items:
-            if normalize(it.get("name", "")) == q:
-                return it
-        return items[0]
-    return None
+        seen.add(it["id"])
+        out.append(it)
+        if len(out) >= max_candidates:
+            break
+    return out
 
 
 def search_steam_storesearch(term, lang):
@@ -358,22 +383,71 @@ def search_steam_storesearch(term, lang):
     return items[0]
 
 
-def search_steam(term, lang):
-    """Search Steam: results page first, storesearch fallback."""
-    it = search_steam_web(term, lang)
-    if it:
-        return it
-    return search_steam_storesearch(term, lang)
+_app_type_cache = {}
 
 
-def resolve_steam(name_en, name_cn):
-    """Return (app_id, steam_name) by searching Steam; English first, then Chinese."""
+def steam_app_type(app_id):
+    """Return the Steam store item type ('game'/'dlc'/...) via appdetails, or None."""
+    key = str(app_id)
+    if key in _app_type_cache:
+        return _app_type_cache[key]
+    url = STEAM_HOST + "/api/appdetails?appids=%s&filters=basic" % urllib.parse.quote(key)
+    t = None
+    try:
+        r = json.loads(steam_request("GET", url))
+        d = r.get(key) or {}
+        if d.get("success"):
+            t = (d.get("data") or {}).get("type")
+    except Exception as e:
+        sys.stderr.write("steam appdetails failed for %s: %s\n" % (key, e))
+    _app_type_cache[key] = t
+    return t
+
+
+def resolve_steam_game(name_en, name_cn, max_checks=3):
+    """Search Steam for a real *game*, skipping dlc/tool/demo items.
+
+    Returns (app_id, steam_name) or (None, None). Non-game store items (DLC,
+    season passes, costumes...) are the main false-positive source of a plain
+    name search, so only items whose store ``type`` is 'game' (or unknown, to
+    avoid dropping matches on a transient appdetails error) are accepted.
+    """
     for cand, lang in ((name_en, "english"), (name_cn, "schinese")):
         if not cand:
             continue
-        it = search_steam(cand, lang)
-        if it:
-            return it.get("id"), it.get("name")
+        checked = 0
+        for it in search_steam_candidates(cand, lang):
+            t = steam_app_type(it["id"])
+            checked += 1
+            if t is None or t == "game":
+                return it.get("id"), it.get("name")
+            if checked >= max_checks:
+                break
+    return None, None
+
+
+def resolve_unmatched(ludoteca_idx, limiter, psstore, name_en, name_cn, allow_api=True):
+    """Resolve one record to a Steam id: ludoteca (curated) first, then Steam.
+
+    Order:
+      1. ludoteca bulk index -- exact PS product code > English title > PS SKU
+         suffix > Chinese title, accepting only a unique, non-empty Steam id.
+      2. ludoteca REST API  -- only when the game is absent from the bulk table.
+      3. Steam name search  -- with a store-type filter (game only, no DLC).
+    Returns (steam_id_str | None, source | None).
+    """
+    if ludoteca is not None and ludoteca_idx is not None:
+        sid, source, status = ludoteca.resolve_local(
+            ludoteca_idx, psstore, name_en, name_cn)
+        if sid:
+            return str(sid), "ludoteca:" + (source or "")
+        if status == "absent" and allow_api and limiter is not None:
+            sid = ludoteca.resolve_api(ludoteca_idx, name_en, name_cn, limiter=limiter)
+            if sid:
+                return str(sid), "ludoteca:api"
+    sid, _sname = resolve_steam_game(name_en, name_cn)
+    if sid:
+        return str(sid), "steam"
     return None, None
 
 
@@ -422,8 +496,9 @@ def main():
         help="Max retries on Steam 429/5xx (default 4, or env STEAM_MAX_RETRIES).")
     parser.add_argument(
         "--force-steam", action="store_true", default=False,
-        help="Ignore cached Steam appIds and re-resolve every record from Steam "
-             "(use once to clear stale/wrong matches after changing the search logic).")
+        help="Ignore cached appIds and re-resolve every record "
+             "(ludoteca, then Steam search). Use once to clear stale/wrong "
+             "matches after changing the resolution logic.")
     parser.add_argument(
         "--seed-csv", nargs="?", const=os.path.join(ROOT, "data", "data.csv"),
         default=None,
@@ -431,9 +506,24 @@ def main():
              "present here, its id is used verbatim and that record is never "
              "re-queried from Steam. Sub ids are written as 's<number>' (e.g. "
              "'s93325'); plain numbers are normal app ids. Only Feishu rows "
-             "ABSENT from this file are resolved via Steam search. Defaults to "
-             "data/data.csv if it exists (so dropping a proofread data.csv into "
-             "the repo just works).")
+             "ABSENT from this file are resolved (ludoteca, then Steam search). "
+             "Defaults to data/data.csv if it exists (so dropping a proofread "
+             "data.csv into the repo just works).")
+    parser.add_argument(
+        "--no-ludoteca", action="store_true", default=False,
+        help="Skip ludoteca.dev resolution and use the Steam name search only "
+             "(also settable via env LUDOTECA_DISABLE=1).")
+    parser.add_argument(
+        "--no-ludoteca-api", action="store_true", default=False,
+        help="Use only the ludoteca bulk table; do not call its REST API for "
+             "games absent from it.")
+    parser.add_argument(
+        "--ludoteca-cache", default=None,
+        help="Directory for the cached ludoteca bulk table "
+             "(default <repo>/.cache/ludoteca, or env LUDOTECA_CACHE_DIR).")
+    parser.add_argument(
+        "--ludoteca-refresh", action="store_true", default=False,
+        help="Force re-download of the ludoteca bulk equivalence table.")
     args = parser.parse_args()
 
     global STEAM_DELAY, STEAM_MAX_RETRIES
@@ -441,6 +531,28 @@ def main():
         STEAM_DELAY = args.delay
     if args.retries is not None:
         STEAM_MAX_RETRIES = args.retries
+
+    # Load the ludoteca bulk equivalence table once (primary, curated matcher).
+    use_ludoteca = (not args.no_ludoteca and
+                    os.environ.get("LUDOTECA_DISABLE", "").lower() not in ("1", "true", "yes"))
+    ludoteca_idx = None
+    ludoteca_limiter = None
+    if use_ludoteca:
+        if ludoteca is None:
+            print("WARN: ludoteca module unavailable; falling back to Steam search")
+        else:
+            cache_dir = (args.ludoteca_cache or os.environ.get("LUDOTECA_CACHE_DIR")
+                         or os.path.join(ROOT, ".cache", "ludoteca"))
+            try:
+                ludoteca_idx = ludoteca.load_index(cache_dir, refresh=args.ludoteca_refresh)
+                ludoteca_limiter = ludoteca.RateLimiter()
+                print("ludoteca table %s: %d rows (%d product codes, %d titles)"
+                      % (ludoteca_idx.generado, ludoteca_idx.rows,
+                         len(ludoteca_idx.by_code), len(ludoteca_idx.by_title)))
+            except Exception as e:
+                sys.stderr.write(
+                    "WARN: ludoteca load failed (%s); falling back to Steam search\n" % e)
+                ludoteca_idx = None
 
     app_id = os.environ.get("FEISHU_APP_ID")
     app_secret = os.environ.get("FEISHU_APP_SECRET")
@@ -477,6 +589,7 @@ def main():
         print("Loaded %d proofread ids from %s" % (len(seed_map), seed_path))
 
     steam_calls = 0
+    ludoteca_hits = 0
     new_records = 0
     status_changes = 0
     unmatched_status = set()
@@ -560,8 +673,8 @@ def main():
             if not isinstance(versions, list):
                 versions = [versions]
 
-            # Precedence: proofread CSV > previous cache > Steam search (new records only).
-            seed_val = seed_map.get(record_id)   # raw string ("s..." for subs) or None
+            # Precedence: proofread CSV > previous cache > ludoteca > Steam search.
+            seed_val = seed_map.get(record_id)   # raw string ("s..."/"b...") or None
             steam_app_id = None
             if seed_val is not None:
                 steam_app_id = seed_val if seed_val != "" else None
@@ -569,9 +682,15 @@ def main():
                 if not args.force_steam:
                     steam_app_id = prev.get("steamAppId")
                 if not steam_app_id:
-                    steam_app_id = resolve_steam(name_en, name_cn)[0]
-                    if steam_app_id:
-                        steam_calls += 1
+                    resolved, source = resolve_unmatched(
+                        ludoteca_idx, ludoteca_limiter, psstore, name_en, name_cn,
+                        allow_api=not args.no_ludoteca_api)
+                    steam_app_id = resolved
+                    if resolved:
+                        if source and source.startswith("ludoteca"):
+                            ludoteca_hits += 1
+                        else:
+                            steam_calls += 1
 
             games.append({
                 "recordId": record_id,
@@ -602,8 +721,8 @@ def main():
     os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as fh:
         json.dump(out, fh, ensure_ascii=False, indent=2)
-    print("Wrote %d games to %s (steam lookups: %d, new records: %d, status changes: %d)"
-          % (len(games), OUTPUT_PATH, steam_calls, new_records, status_changes))
+    print("Wrote %d games to %s (ludoteca: %d, steam lookups: %d, new records: %d, status changes: %d)"
+          % (len(games), OUTPUT_PATH, ludoteca_hits, steam_calls, new_records, status_changes))
     if unmatched_status:
         sample = ", ".join(sorted(unmatched_status)[:10])
         print("WARN: %d status value(s) could not be resolved to an option name: %s"
