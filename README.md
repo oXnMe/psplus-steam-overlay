@@ -26,7 +26,7 @@
 
 * **页面适配**：支持 Steam 商店首页、搜索页、愿望单、游戏详情页
 * **数据同步**：安装后首次访问 Steam 任意页面会自动从 Github 同步数据到本地，后续仅在仓库数据有更新时同步数据
-* **数据来源**：由 Workflow 自动检查飞书表格数据更新。Steam AppID 匹配优先级为：人工校对表 `data/data.csv` > 缓存 > [ludoteca.dev](https://ludoteca.dev) 跨平台等价表（按 PS 产品码 / 名称精确匹配）> Steam 名称搜索（过滤掉 DLC/工具等非游戏条目）。
+* **数据来源**：由 Workflow 自动检查飞书表格数据更新。Steam AppID 匹配优先级为：人工校对表 `data/data.csv` > 缓存 > [ludoteca.dev](https://ludoteca.dev) 跨平台等价表（按 PS 产品码 / 名称精确匹配，并用 Steam 商店名交叉验证）> Steam 名称搜索（按名称相似度接受，DLC/资料片只要名字对得上也算匹配）。
 
 ---
 

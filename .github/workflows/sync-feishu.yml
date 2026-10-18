@@ -58,6 +58,10 @@ jobs:
           FEISHU_APP_SECRET: ${{ secrets.FEISHU_APP_SECRET }}
           FEISHU_APP_TOKEN: ${{ secrets.FEISHU_APP_TOKEN }}
           FEISHU_TABLE_IDS: ${{ secrets.FEISHU_TABLE_ID || secrets.FEISHU_TABLE_IDS }}
+          # Newly matched records are pushed to Telegram so wrong matches are
+          # caught early. Leave these secrets unset to disable the notices.
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           python3 scripts/sync_feishu.py \
             --seed-csv "${{ github.event.inputs.seed_csv || 'data/data.csv' }}" \
@@ -65,6 +69,8 @@ jobs:
             --retries "${{ github.event.inputs.retries || '4' }}"
 
       - name: Commit refreshed data
+        # The sync script leaves the JSON untouched when only "updatedAt" would
+        # change, so a quiet day stages nothing and this step exits early.
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"

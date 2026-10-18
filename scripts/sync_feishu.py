@@ -3,11 +3,20 @@
 
 Each record's Steam app id is resolved with this precedence: proofread
 ``data.csv`` seed > previous cached value > ludoteca.dev curated cross-store
-table > Steam name search filtered to real games (dlc/tool/demo rejected).
+table (corroborated against the Steam store name) > Steam name search kept only
+when the candidate's name is close enough to the record's.
+
+Records that are new to Feishu and not in the seed are reported to a Telegram
+chat once they are resolved (and a short list is sent for ones that did not
+match), so bad matches can be spotted early.
+
+The output file is only rewritten when something other than ``updatedAt``
+changed, so a day with no data movement produces no commit at all.
 """
 import argparse
 import csv
 import datetime
+import difflib
 import html
 import json
 import os
@@ -168,13 +177,73 @@ def list_records(app_token, table_id, token):
 
 
 def normalize(text):
-    """Normalize a name for forgiving cross-platform matching (lowercase, NFKC, keep alnum/CJK)."""
+    """Normalize a name for forgiving cross-platform matching.
+
+    Lowercase, compatibility-decompose + fold accents to ASCII (so
+    ``Ragnarök`` == ``Ragnarok``), then keep only alnum/CJK.
+    """
     if not text:
         return ""
     s = str(text).lower()
-    s = unicodedata.normalize("NFKC", s)
+    s = unicodedata.normalize("NFKD", s)
+    s = "".join(ch for ch in s if not unicodedata.combining(ch))
     s = re.sub(r"[^0-9a-z\u4e00-\u9fff]+", "", s)
     return s
+
+
+# Word tokens (lowercased, accents folded, possessives dropped) -- used to
+# require that a Steam candidate carries the record's discriminating words and
+# nothing that turns it into a different product. e.g. the year in "Monster
+# Energy Supercross 2025", the "3" in "RollerCoaster Tycoon 3".
+_TOKEN_RE = re.compile(r"[0-9a-z\u4e00-\u9fff]+")
+_POSSESSIVE_RE = re.compile(r"['\u2019]s\b")
+_STOPWORDS = frozenset({"the", "of", "a", "an", "and", "or", "in", "on", "to", "vs", "at"})
+# Extra words that mean the store entry is not the game itself.
+_NON_GAME_TOKENS = frozenset({
+    "soundtrack", "soundtracks", "ost", "artbook", "artbooks", "wallpaper",
+    "wallpapers", "demo", "avatar", "avatars", "theme", "themes", "ringtone",
+    "ringtones", "screensaver", "screensavers",
+})
+# Words that mark the same product re-issued or repackaged -- "Horizon
+# Forbidden West" -> "... Complete Edition", "Darksiders II" -> "... Deathinitive
+# Edition". A candidate that extends the record name and mentions one of these is
+# accepted; a tail without any of them (a sequel number, "Prison", a subtitle)
+# means a *different* product and is dropped.
+_EDITION_WORDS = frozenset({
+    "edition", "version", "complete", "deluxe", "definitive", "remaster",
+    "remastered", "redux", "goty", "ultimate", "enhanced", "encore",
+    "anniversary", "collection", "trilogy", "bundle", "legendary", "imperial",
+    "royal", "extended", "final", "cut", "director", "directors", "hd",
+    "platinum", "intergrade", "classic", "standard", "video", "game",
+})
+# Add-on words and bare modifiers (DLC/season pass/upgrade/"Special Color"...).
+# They are not discriminators either, but an *add-on* tail is a different
+# product from the base game, so unlike the edition words above they do not make
+# a prefix-extension acceptable.
+_ADDON_WORDS = frozenset({
+    "pack", "pass", "season", "expansion", "dlc", "addon", "add", "on",
+    "content", "upgrade", "kit", "bonus", "plus", "special", "digital", "gold",
+    "premium",
+})
+# Unambiguous "this is an add-on, not the game" words. An edition word alone is
+# not enough to accept an extension: "Dead Space" must not match "Dead Space -
+# Digital Deluxe *Upgrade*", nor "Elden Ring" "Shadow of the Erdtree - Deluxe
+# *Upgrade*". Bare modifiers (special/digital/gold/premium) stay out of this set
+# because they legitimately prefix an edition ("Gold Edition").
+_TAIL_BLOCKERS = frozenset({
+    "pack", "pass", "season", "expansion", "dlc", "addon", "add", "on",
+    "content", "upgrade", "kit", "bonus",
+})
+_TAIL_QUALIFIERS = _EDITION_WORDS | _ADDON_WORDS
+
+
+def name_tokens(text):
+    """Word tokens of a name: lowercase, accents folded, possessives dropped."""
+    s = str(text or "").lower()
+    s = unicodedata.normalize("NFKD", s)
+    s = "".join(ch for ch in s if not unicodedata.combining(ch))
+    s = _POSSESSIVE_RE.sub("", s)
+    return _TOKEN_RE.findall(s)
 
 
 def parse_tier(value):
@@ -383,72 +452,384 @@ def search_steam_storesearch(term, lang):
     return items[0]
 
 
-_app_type_cache = {}
+_app_info_cache = {}
 
 
-def steam_app_type(app_id):
-    """Return the Steam store item type ('game'/'dlc'/...) via appdetails, or None."""
+def steam_app_info(app_id):
+    """Return {'name', 'type', 'ok'} for a Steam app via appdetails (cached).
+
+    ``name``/``type`` are None when the app has no store page (delisted) or the
+    request failed; ``ok`` is True only when a store name was obtained. ``type``
+    is informational only -- we no longer reject by store type (PS Plus lists
+    chapters/expansions as titles, so a DLC match can be legitimate).
+    """
     key = str(app_id)
-    if key in _app_type_cache:
-        return _app_type_cache[key]
+    if key in _app_info_cache:
+        return _app_info_cache[key]
+    info = {"name": None, "type": None, "ok": False}
     url = STEAM_HOST + "/api/appdetails?appids=%s&filters=basic" % urllib.parse.quote(key)
-    t = None
     try:
         r = json.loads(steam_request("GET", url))
         d = r.get(key) or {}
         if d.get("success"):
-            t = (d.get("data") or {}).get("type")
+            data = d.get("data") or {}
+            info["name"] = data.get("name")
+            info["type"] = data.get("type")
+            info["ok"] = bool(data.get("name"))
     except Exception as e:
         sys.stderr.write("steam appdetails failed for %s: %s\n" % (key, e))
-    _app_type_cache[key] = t
-    return t
+    _app_info_cache[key] = info
+    return info
 
 
-def resolve_steam_game(name_en, name_cn, max_checks=3):
-    """Search Steam for a real *game*, skipping dlc/tool/demo items.
+# A Steam candidate is accepted for a record only when its store name is close
+# enough to the record's own name. This replaced the old store-`type` filter:
+# DLC/chapter matches are fine (PS Plus often lists a chapter as its own title)
+# as long as the names line up; unrelated search hits get dropped instead.
+NAME_SIM_MIN = 0.75
+# Score given to a record name extended by an edition/add-on tail.
+_TAIL_SCORE = 0.9
+# Store `type` ranking: a real game page is preferred over a DLC/soundtrack
+# page when both names match (the PS Plus entry is usually the game itself).
+_TYPE_RANK = {"game": 2}
 
-    Returns (app_id, steam_name) or (None, None). Non-game store items (DLC,
-    season passes, costumes...) are the main false-positive source of a plain
-    name search, so only items whose store ``type`` is 'game' (or unknown, to
-    avoid dropping matches on a transient appdetails error) are accepted.
+
+def _type_rank(store_type):
+    if store_type in _TYPE_RANK:
+        return _TYPE_RANK[store_type]
+    return 1 if not store_type else 0
+
+
+def _extension_tail(rec_tokens, cand_tokens):
+    """Tokens by which one token sequence extends the other, or None if neither.
+
+    ``[]`` when the two are token-identical; ``None`` when they diverge.
     """
-    for cand, lang in ((name_en, "english"), (name_cn, "schinese")):
-        if not cand:
+    n = len(rec_tokens)
+    if n and cand_tokens[:n] == rec_tokens:
+        return cand_tokens[n:]
+    m = len(cand_tokens)
+    if m and rec_tokens[:m] == cand_tokens:
+        return rec_tokens[m:]
+    return None
+
+
+def steam_name_match(record_names, cand_name):
+    """Judge a Steam candidate name against the record's English/Chinese names.
+
+    Returns ``(score, ok)``; accepted as soon as *any* record name qualifies:
+
+    * every meaningful word of the record name must appear in the candidate
+      (so a missing discriminator -- "Monster Energy Supercross **2025**",
+      "RollerCoaster Tycoon **3**" -- or a different chapter is dropped);
+    * the candidate must not add a number the record lacks (a sequel: "No
+      Straight Roads" does not become "**NO STRAIGHT ROADS 2**");
+    * if the candidate merely extends the record name, the extra words must
+      include a *re-release* word ("... Complete Edition", "Darksiders II
+      **Deathinitive Edition**") and must not include an add-on word
+      ("... Deluxe **Upgrade**", "... Ruin Rising Pack") -- a tail with no
+      re-release word at all ("Dead Star **Prison**") is a different product;
+    * otherwise fall back to a name-similarity ratio >= ``NAME_SIM_MIN``.
+
+    Candidates carrying a non-game extra (soundtrack/artbook/demo...) are
+    rejected outright. Comparing both names matters when the Chinese name was
+    searched but the store name is English (``黑手党 故乡`` -> english page).
+    """
+    if not cand_name:
+        return 0.0, False
+    c_norm = normalize(cand_name)
+    if not c_norm:
+        return 0.0, False
+    cand_tokens = name_tokens(cand_name)
+    cand_set = set(cand_tokens)
+
+    rec_tokens_all = set()
+    for raw in record_names:
+        if raw:
+            rec_tokens_all.update(name_tokens(raw))
+    if (cand_set - rec_tokens_all) & _NON_GAME_TOKENS:
+        return 0.0, False
+
+    best = 0.0
+    for raw in record_names:
+        if not raw:
             continue
-        checked = 0
-        for it in search_steam_candidates(cand, lang):
-            t = steam_app_type(it["id"])
-            checked += 1
-            if t is None or t == "game":
-                return it.get("id"), it.get("name")
-            if checked >= max_checks:
-                break
-    return None, None
+        v = normalize(raw)
+        if not v:
+            continue
+        rec_tokens = name_tokens(raw)
+        # Edition/add-on words never discriminate one product from another (the
+        # store page may or may not carry them), so they are not required; the
+        # tail rule below still vets whatever extra words appear.
+        meaningful = {t for t in rec_tokens
+                      if t not in _STOPWORDS and t not in _TAIL_QUALIFIERS}
+        if meaningful and not meaningful <= cand_set:
+            continue                                   # discriminator missing
+        if any(t.isdigit() for t in cand_set - set(rec_tokens)):
+            continue                                   # an added number = sequel
+        tail = _extension_tail(rec_tokens, cand_tokens)
+        if v == c_norm:
+            score = 1.0
+        elif tail is not None:
+            # The tail must identify a re-release of the same product
+            # ("Complete Edition", "Deathinitive Edition"). A tail that only
+            # adds DLC words ("... Ruin Rising Pack") is a *different* product
+            # from the base game, and one with no such word at all ("Prison")
+            # is unrelated. An explicit add-on word ("... Deluxe Upgrade") is
+            # rejected even when an edition word is present.
+            if not any(t in _EDITION_WORDS for t in tail):
+                continue
+            if any(t in _TAIL_BLOCKERS for t in tail):
+                continue
+            score = _TAIL_SCORE
+        else:
+            score = difflib.SequenceMatcher(None, v, c_norm).ratio()
+            if score < NAME_SIM_MIN:
+                continue
+        return score, True
+    return best, False
+
+
+def _steam_candidate_pool(name_en, name_cn, per_term=5):
+    """Deduped Steam search candidates for the English then Chinese name."""
+    pool, seen = [], set()
+    for term, lang in ((name_en, "english"), (name_cn, "schinese")):
+        if not term:
+            continue
+        for it in search_steam_candidates(term, lang, max_candidates=per_term):
+            if it["id"] in seen:
+                continue
+            seen.add(it["id"])
+            pool.append(it)
+    return pool
+
+
+def resolve_steam_game(name_en, name_cn, max_checks=8):
+    """Search Steam for the record's game, keeping the best-matching candidate.
+
+    Acceptance is by *name* (see ``steam_name_match``) instead of store type; an
+    exact name wins outright, an edition/DLC tail is accepted, an unrelated hit
+    is dropped. Among acceptable candidates a store ``type`` of ``game`` is
+    preferred (the DLC's page only wins when nothing closer is a game).
+    Returns ``(app_id_str, steam_name, type, score)`` or None.
+    """
+    names = (name_en, name_cn)
+    if not any(names):
+        return None
+    best = None
+    for it in _steam_candidate_pool(name_en, name_cn)[:max_checks]:
+        info = steam_app_info(it["id"])
+        sname = info.get("name") or it.get("name") or ""
+        score, ok = steam_name_match(names, sname)
+        if not ok:
+            continue
+        rank = (_type_rank(info.get("type")), score)
+        if best is None or rank > best[0]:
+            best = (rank, (str(it["id"]), sname, info.get("type"), score))
+        if rank == (2, 1.0):
+            break   # real game with the exact name: nothing can beat it
+    return best[1] if best else None
 
 
 def resolve_unmatched(ludoteca_idx, limiter, psstore, name_en, name_cn, allow_api=True):
-    """Resolve one record to a Steam id: ludoteca (curated) first, then Steam.
+    """Resolve one record to a Steam id: ludoteca (curated) + Steam cross-check.
 
     Order:
       1. ludoteca bulk index -- exact PS product code > English title > PS SKU
          suffix > Chinese title, accepting only a unique, non-empty Steam id.
       2. ludoteca REST API  -- only when the game is absent from the bulk table.
-      3. Steam name search  -- with a store-type filter (game only, no DLC).
-    Returns (steam_id_str | None, source | None).
+      3. Steam name search   -- the closest-named candidate above the floor.
+
+    ludoteca is curated but not infallible, so its id is only trusted once the
+    Steam store name for that id lines up with the record name; when it does
+    not, the name-similar Steam candidate wins (falling back to ludoteca's guess
+    if Steam has nothing better). Returns (steam_id_str | None, source | None).
     """
+    lud_sid = lud_source = None
     if ludoteca is not None and ludoteca_idx is not None:
         sid, source, status = ludoteca.resolve_local(
             ludoteca_idx, psstore, name_en, name_cn)
         if sid:
-            return str(sid), "ludoteca:" + (source or "")
-        if status == "absent" and allow_api and limiter is not None:
+            lud_sid, lud_source = str(sid), "ludoteca:" + (source or "")
+        elif status == "absent" and allow_api and limiter is not None:
             sid = ludoteca.resolve_api(ludoteca_idx, name_en, name_cn, limiter=limiter)
             if sid:
-                return str(sid), "ludoteca:api"
-    sid, _sname = resolve_steam_game(name_en, name_cn)
-    if sid:
-        return str(sid), "steam"
-    return None, None
+                lud_sid, lud_source = str(sid), "ludoteca:api"
+
+    if lud_sid:
+        sname = steam_app_info(lud_sid).get("name")
+        # Unverifiable (delisted / request failed) or name-confirmed -> trust it.
+        if not sname or steam_name_match((name_en, name_cn), sname)[1]:
+            return lud_sid, lud_source
+        sys.stderr.write(
+            "ludoteca id %s (%r) name-mismatch for %r -> trying Steam search\n"
+            % (lud_sid, sname, name_en or name_cn))
+
+    steam = resolve_steam_game(name_en, name_cn)
+    if steam:
+        return steam[0], "steam"
+    return lud_sid, lud_source
+
+
+TELEGRAM_API_URL = "https://api.telegram.org/bot%s/sendMessage"
+# New records matched in one run: send one message each up to this count, then
+# switch to a single digest (avoids flooding the chat on a big import).
+TELEGRAM_MAX_INDIVIDUAL = 10
+# Seconds between consecutive messages (Telegram tolerates ~1 msg/s per chat).
+TELEGRAM_GAP = 0.5
+# Telegram caps a message at 4096 chars; stay well below that.
+TELEGRAM_TEXT_LIMIT = 3500
+
+
+def steam_store_url(steam_id):
+    """Store URL for an app/sub/bundle id ('s93325' -> /sub/, 'b16609' -> /bundle/)."""
+    s = str(steam_id or "").strip()
+    if s.isdigit():
+        return STEAM_HOST + "/app/%s/" % s
+    if len(s) > 1 and s[0] in ("s", "b") and s[1:].isdigit():
+        return STEAM_HOST + ("/sub/%s/" if s[0] == "s" else "/bundle/%s/") % s[1:]
+    return ""
+
+
+def telegram_config():
+    """(token, chat_id) when configured, else None.
+
+    Set TELEGRAM_BOT_TOKEN + TELEGRAM_CHAT_ID to enable the new-record notices;
+    TELEGRAM_DISABLE=1 turns them off without unsetting the credentials.
+    """
+    token = (os.environ.get("TELEGRAM_BOT_TOKEN") or "").strip()
+    chat_id = (os.environ.get("TELEGRAM_CHAT_ID") or "").strip()
+    if not token or not chat_id:
+        return None
+    if (os.environ.get("TELEGRAM_DISABLE") or "").lower() in ("1", "true", "yes"):
+        return None
+    return token, chat_id
+
+
+def telegram_send(token, chat_id, text):
+    """Send one HTML message. Returns True on success; never raises."""
+    body = urllib.parse.urlencode({
+        "chat_id": chat_id,
+        "text": text,
+        "parse_mode": "HTML",
+        "disable_web_page_preview": "true",
+    }).encode("utf-8")
+    req = urllib.request.Request(
+        TELEGRAM_API_URL % token, data=body, method="POST",
+        headers={"Content-Type": "application/x-www-form-urlencoded"})
+    try:
+        with urllib.request.urlopen(req, timeout=20) as resp:
+            payload = json.loads(resp.read().decode("utf-8", "replace"))
+        if not payload.get("ok"):
+            sys.stderr.write("telegram rejected the message: %s\n"
+                             % str(payload.get("description"))[:200])
+            return False
+        return True
+    except Exception as e:
+        sys.stderr.write("telegram send failed: %s\n" % e)
+        return False
+
+
+def _tg_escape(value):
+    return html.escape(str(value or ""), quote=False)
+
+
+def format_match_message(record_id, steam_id, name_en, name_cn, steam_name, source):
+    """One new-record match, as an HTML message."""
+    url = steam_store_url(steam_id)
+    lines = [
+        "<b>PS Plus 新增匹配</b>",
+        "recordId: <code>%s</code>" % _tg_escape(record_id),
+        "appid: <code>%s</code>" % _tg_escape(steam_id),
+        "英文名称: %s" % (_tg_escape(name_en) or "—"),
+        "中文名称: %s" % (_tg_escape(name_cn) or "—"),
+        "Steam 名称: %s" % (_tg_escape(steam_name) or "（取不到商店名/已下架）"),
+        "Steam 链接: %s" % ('<a href="%s">%s</a>' % (url, _tg_escape(url))
+                            if url else "—"),
+    ]
+    if source:
+        lines.append("来源: %s" % _tg_escape(source))
+    return "\n".join(lines)
+
+
+def format_match_line(index, record_id, steam_id, name_en, name_cn, steam_name, source):
+    """Compact one-entry digest line for a new-record match."""
+    url = steam_store_url(steam_id)
+    title = _tg_escape(name_en or name_cn) or "—"
+    return ("%d. <code>%s</code> · <code>%s</code> · %s\n"
+            "    → %s\n    %s%s"
+            % (index, _tg_escape(record_id), _tg_escape(steam_id), title,
+               _tg_escape(steam_name) or "（无商店名）", url,
+               ("  · " + _tg_escape(source)) if source else ""))
+
+
+def _telegram_chunks(header, lines):
+    """Split lines into messages that stay under Telegram's length cap."""
+    chunks, cur, size = [], [], len(header)
+    for line in lines:
+        if cur and size + len(line) + 1 > TELEGRAM_TEXT_LIMIT:
+            chunks.append(cur)
+            cur, size = [], len(header)
+        cur.append(line)
+        size += len(line) + 1
+    if cur:
+        chunks.append(cur)
+    return ["%s\n%s" % (header, "\n".join(c)) for c in chunks]
+
+
+def _notify_new_matches(matched, unmatched):
+    """Push the records matched (and not matched) this run to Telegram.
+
+    ``matched`` items are ``(recordId, steam_id, name_en, name_cn, steam_name,
+    source)``; ``unmatched`` items are ``(recordId, name_en, name_cn)``. Only
+    records that are *new to Feishu and resolved in this run* are passed in, so
+    a normal daily run (no new rows) sends nothing.
+    Returns the number of matched records reported.
+    """
+    if not matched and not unmatched:
+        return 0
+    cfg = telegram_config()
+    if cfg is None:
+        print("telegram: not configured (TELEGRAM_BOT_TOKEN/TELEGRAM_CHAT_ID), "
+              "skipping %d match + %d unmatched notice(s)" % (len(matched), len(unmatched)))
+        return 0
+    token, chat_id = cfg
+
+    sent = 0
+    if len(matched) <= TELEGRAM_MAX_INDIVIDUAL:
+        for item in matched:
+            if telegram_send(token, chat_id, format_match_message(*item)):
+                sent += 1
+            time.sleep(TELEGRAM_GAP)
+    else:
+        for text in _telegram_chunks(
+                "<b>PS Plus 新增匹配（%d 条）</b>" % len(matched),
+                [format_match_line(i + 1, *item) for i, item in enumerate(matched)]):
+            if telegram_send(token, chat_id, text):
+                sent += len(matched)
+            time.sleep(TELEGRAM_GAP)
+
+    if unmatched:
+        for text in _telegram_chunks(
+                "<b>PS Plus 新增记录未匹配（%d 条）</b>" % len(unmatched),
+                ["%d. <code>%s</code> · %s · %s"
+                 % (i + 1, _tg_escape(rid), _tg_escape(en) or "—", _tg_escape(cn) or "—")
+                 for i, (rid, en, cn) in enumerate(unmatched)] +
+                ["\n人工核对后写入 data/data.csv"]):
+            telegram_send(token, chat_id, text)
+            time.sleep(TELEGRAM_GAP)
+
+    print("telegram: reported %d new match(es), %d unmatched" % (sent, len(unmatched)))
+    return sent
+
+
+def notify_new_matches(matched, unmatched):
+    """Best-effort Telegram report: never lets a notice failure break the sync."""
+    try:
+        return _notify_new_matches(matched, unmatched)
+    except Exception as e:
+        sys.stderr.write("telegram notify skipped (%s)\n" % e)
+        return 0
 
 
 def load_previous():
@@ -483,6 +864,53 @@ def load_seed(path):
                 continue
             mapping[rid] = (row.get("steamAppId") or "").strip()
     return mapping
+
+
+def _data_key(count, games):
+    """Content fingerprint of the payload, timestamp excluded.
+
+    Key order is irrelevant (``sort_keys``) so a formatting change alone is not
+    mistaken for a data change, while any edit to a record -- including adding a
+    field -- still shows up.
+    """
+    return json.dumps({"count": count, "games": games},
+                      ensure_ascii=False, indent=2, sort_keys=True)
+
+
+def write_output(games):
+    """Write the payload, leaving the file untouched when only the date differs.
+
+    ``updatedAt`` records the last time the *data* changed, not the last run: the
+    userscript compares it to decide whether to refresh its local cache, so a
+    daily touch would only produce empty commits (and pointless cache
+    refreshes). When the new content would be identical the existing file is
+    left alone, keeping ``git status`` clean for local runs too.
+
+    Returns True when the file was written, False when it was already current.
+    """
+    out = {
+        "updatedAt": datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "count": len(games),
+        "games": games,
+    }
+    key = _data_key(out["count"], games)
+
+    previous = None
+    try:
+        with open(OUTPUT_PATH, encoding="utf-8") as fh:
+            previous = json.load(fh)
+    except (OSError, ValueError):
+        previous = None
+    if isinstance(previous, dict) and isinstance(previous.get("games"), list):
+        if _data_key(len(previous["games"]), previous["games"]) == key:
+            print("No data changes since %s; %s left untouched"
+                  % (previous.get("updatedAt") or "?", os.path.basename(OUTPUT_PATH)))
+            return False
+
+    os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
+    with open(OUTPUT_PATH, "w", encoding="utf-8") as fh:
+        json.dump(out, fh, ensure_ascii=False, indent=2)
+    return True
 
 
 def main():
@@ -593,6 +1021,10 @@ def main():
     new_records = 0
     status_changes = 0
     unmatched_status = set()
+    # New Feishu rows resolved in this run -> reported to Telegram so wrong
+    # matches get spotted early. Items: (recordId, steam_id, en, cn, steam, src)
+    new_matched = []
+    new_unmatched = []
 
     games = []
     for tid in table_ids:
@@ -691,6 +1123,13 @@ def main():
                             ludoteca_hits += 1
                         else:
                             steam_calls += 1
+                        # Report a brand-new row the moment it gets matched.
+                        if not prev:
+                            new_matched.append((
+                                record_id, resolved, name_en, name_cn,
+                                steam_app_info(resolved).get("name") or "", source))
+                    elif not prev:
+                        new_unmatched.append((record_id, name_en, name_cn))
 
             games.append({
                 "recordId": record_id,
@@ -713,20 +1152,22 @@ def main():
                         "versions", "psstore", "color")
     json_games = [{k: g[k] for k in published_fields if k in g} for g in games]
 
-    out = {
-        "updatedAt": datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "count": len(json_games),
-        "games": json_games,
-    }
-    os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
-    with open(OUTPUT_PATH, "w", encoding="utf-8") as fh:
-        json.dump(out, fh, ensure_ascii=False, indent=2)
-    print("Wrote %d games to %s (ludoteca: %d, steam lookups: %d, new records: %d, status changes: %d)"
-          % (len(games), OUTPUT_PATH, ludoteca_hits, steam_calls, new_records, status_changes))
+    written = write_output(json_games)
+    summary = ("ludoteca: %d, steam lookups: %d, new records: %d, status changes: %d"
+               % (ludoteca_hits, steam_calls, new_records, status_changes))
+    if written:
+        print("Wrote %d games to %s (%s)" % (len(games), OUTPUT_PATH, summary))
+    else:
+        print("No change, %d games in %s already current (%s)"
+              % (len(games), OUTPUT_PATH, summary))
     if unmatched_status:
         sample = ", ".join(sorted(unmatched_status)[:10])
         print("WARN: %d status value(s) could not be resolved to an option name: %s"
               % (len(unmatched_status), sample))
+
+    # Best-effort: notifies only the rows that are new to Feishu *and* were
+    # resolved by this run, so a steady-state sync stays silent.
+    notify_new_matches(new_matched, new_unmatched)
 
 
 if __name__ == "__main__":
