@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-17T18:44:30Z",
+  "updatedAt": "2026-10-19T21:12:08Z",
   "count": 1590,
   "games": [
     {
@@ -8,15 +8,15 @@
       "tier": 3,
       "month": "2026年10月",
       "monthSort": "2026-10",
-      "statusName": "即将入库",
-      "statusDisplay": "即将入库",
+      "statusName": "在库",
+      "statusDisplay": "在库",
       "statusDate": "2026年10月20日",
       "versions": [
         "PS4",
         "PS5"
       ],
       "psstore": "",
-      "color": 2
+      "color": 7
     },
     {
       "recordId": "reczz28NLR3w6Aed",
@@ -24,15 +24,15 @@
       "tier": 3,
       "month": "2026年10月",
       "monthSort": "2026-10",
-      "statusName": "即将入库",
-      "statusDisplay": "即将入库",
+      "statusName": "在库",
+      "statusDisplay": "在库",
       "statusDate": "2026年10月20日",
       "versions": [
         "PS4",
         "PS5"
       ],
       "psstore": "https://store.playstation.com/zh-hans-hk/product/UP0182-PPSA26698_00-RCT3COMPLETE0001",
-      "color": 2
+      "color": 7
     },
     {
       "recordId": "reczz28NLPDow3xS",
@@ -40,14 +40,14 @@
       "tier": 2,
       "month": "2026年10月",
       "monthSort": "2026-10",
-      "statusName": "即将入库",
-      "statusDisplay": "即将入库",
+      "statusName": "在库",
+      "statusDisplay": "在库",
       "statusDate": "2026年10月20日",
       "versions": [
         "PS5"
       ],
       "psstore": "https://store.playstation.com/zh-hans-hk/product/UP1001-PPSA14251_00-00000NEROPS5SIEA",
-      "color": 2
+      "color": 7
     },
     {
       "recordId": "reczz28NLPDoxCCI",
@@ -55,15 +55,15 @@
       "tier": 2,
       "month": "2026年10月",
       "monthSort": "2026-10",
-      "statusName": "即将入库",
-      "statusDisplay": "即将入库",
+      "statusName": "在库",
+      "statusDisplay": "在库",
       "statusDate": "2026年10月20日",
       "versions": [
         "PS4",
         "PS5"
       ],
       "psstore": "https://store.playstation.com/zh-hans-hk/product/EP9000-CUSA24705_00-FORBIDDENWESTPS4",
-      "color": 2
+      "color": 7
     },
     {
       "recordId": "reczz28NLPDozgk0",
@@ -86,15 +86,15 @@
       "tier": 2,
       "month": "2026年10月",
       "monthSort": "2026-10",
-      "statusName": "即将入库",
-      "statusDisplay": "即将入库",
+      "statusName": "在库",
+      "statusDisplay": "在库",
       "statusDate": "2026年10月20日",
       "versions": [
         "PS4",
         "PS5"
       ],
       "psstore": "https://store.playstation.com/zh-hans-hk/product/UP8103-CUSA47693_00-0734550977773698",
-      "color": 2
+      "color": 7
     },
     {
       "recordId": "reczz28NLPDozvKy",
@@ -102,14 +102,14 @@
       "tier": 2,
       "month": "2026年10月",
       "monthSort": "2026-10",
-      "statusName": "即将入库",
-      "statusDisplay": "即将入库",
+      "statusName": "在库",
+      "statusDisplay": "在库",
       "statusDate": "2026年10月20日",
       "versions": [
         "PS5"
       ],
       "psstore": "https://store.playstation.com/zh-hans-hk/product/EP2907-PPSA24864_00-0657719756865376",
-      "color": 2
+      "color": 7
     },
     {
       "recordId": "reczz28NLPDp2PCl",
@@ -117,15 +117,15 @@
       "tier": 2,
       "month": "2026年10月",
       "monthSort": "2026-10",
-      "statusName": "即将入库",
-      "statusDisplay": "即将入库",
+      "statusName": "在库",
+      "statusDisplay": "在库",
       "statusDate": "2026年10月20日",
       "versions": [
         "PS4",
         "PS5"
       ],
       "psstore": "https://store.playstation.com/zh-hans-hk/product/HP0700-PPSA02796_00-TOARISEPS5000001",
-      "color": 2
+      "color": 7
     },
     {
       "recordId": "reczz28NLPDp073F",
@@ -133,14 +133,14 @@
       "tier": 2,
       "month": "2026年10月",
       "monthSort": "2026-10",
-      "statusName": "即将入库",
-      "statusDisplay": "即将入库",
+      "statusName": "在库",
+      "statusDisplay": "在库",
       "statusDate": "2026年10月20日",
       "versions": [
         "PS5"
       ],
       "psstore": "https://store.playstation.com/zh-hans-hk/product/EP4356-PPSA20435_00-SUPERCROSS25GAME",
-      "color": 2
+      "color": 7
     },
     {
       "recordId": "reczz28I0VZADCMd",
@@ -2445,14 +2445,14 @@
       "tier": 2,
       "month": "2025年10月",
       "monthSort": "2025-10",
-      "statusName": "即将出库",
-      "statusDisplay": "即将出库",
+      "statusName": "已出库",
+      "statusDisplay": "已出库",
       "statusDate": "2026年10月20日",
       "versions": [
         "PS5"
       ],
       "psstore": "https://store.playstation.com/zh-hant-hk/product/HP0101-PPSA10644_00-MAINGAME00000000",
-      "color": 3
+      "color": 5
     },
     {
       "recordId": "recv83nQgyBou0",
@@ -2490,14 +2490,14 @@
       "tier": 2,
       "month": "2025年10月",
       "monthSort": "2025-10",
-      "statusName": "即将出库",
-      "statusDisplay": "即将出库",
+      "statusName": "已出库",
+      "statusDisplay": "已出库",
       "statusDate": "2026年10月20日",
       "versions": [
         "PS4"
       ],
       "psstore": "https://store.playstation.com/zh-hant-hk/product/HP0177-CUSA17680_00-ASIA000000000000",
-      "color": 3
+      "color": 5
     },
     {
       "recordId": "recv9oTjPZSQQW",
@@ -2505,14 +2505,14 @@
       "tier": 2,
       "month": "2025年10月",
       "monthSort": "2025-10",
-      "statusName": "即将出库",
-      "statusDisplay": "即将出库",
+      "statusName": "已出库",
+      "statusDisplay": "已出库",
       "statusDate": "2026年10月20日",
       "versions": [
         "PS5"
       ],
       "psstore": "https://store.playstation.com/zh-hant-hk/product/JP0177-PPSA02690_00-LIKEADRAGON00000",
-      "color": 3
+      "color": 5
     },
     {
       "recordId": "recv83nQgy2I82",
@@ -3744,15 +3744,15 @@
       "tier": 2,
       "month": "2025年5月",
       "monthSort": "2025-05",
-      "statusName": "即将出库",
-      "statusDisplay": "即将出库",
+      "statusName": "已出库",
+      "statusDisplay": "已出库",
       "statusDate": "2026年10月20日",
       "versions": [
         "PS4",
         "PS5"
       ],
       "psstore": "https://store.playstation.com/zh-hant-hk/product/UP4744-PPSA08115_00-GLOOMHAVENMERC01",
-      "color": 3
+      "color": 5
     },
     {
       "recordId": "recv83nQgyh5OF",
@@ -4937,15 +4937,15 @@
       "tier": 2,
       "month": "2024年12月",
       "monthSort": "2024-12",
-      "statusName": "即将出库",
-      "statusDisplay": "即将出库",
+      "statusName": "已出库",
+      "statusDisplay": "已出库",
       "statusDate": "2026年10月20日",
       "versions": [
         "PS4",
         "PS5"
       ],
       "psstore": "https://store.playstation.com/zh-hant-hk/product/EP2377-PPSA03286_00-JWEVOLUTION2AAAA",
-      "color": 3
+      "color": 5
     },
     {
       "recordId": "recv83nQgyvi2M",
@@ -7730,7 +7730,7 @@
       "monthSort": "2024-02",
       "statusName": "已出库",
       "statusDisplay": "已出库",
-      "statusDate": "2025年1月2日",
+      "statusDate": "2025年2月18日",
       "versions": [
         "PS4",
         "PS5"
@@ -7820,14 +7820,14 @@
       "tier": 2,
       "month": "2024年2月",
       "monthSort": "2024-02",
-      "statusName": "即将出库",
-      "statusDisplay": "即将出库",
+      "statusName": "已出库",
+      "statusDisplay": "已出库",
       "statusDate": "2026年10月20日",
       "versions": [
         "PS4"
       ],
       "psstore": "https://store.playstation.com/zh-hant-hk/product/EP4008-CUSA19326_00-RLSIEE0000000000",
-      "color": 3
+      "color": 5
     },
     {
       "recordId": "recv83nQgyFOO8",
@@ -16155,14 +16155,14 @@
       "tier": 2,
       "month": "2022年5月",
       "monthSort": "2022-05",
-      "statusName": "即将出库",
-      "statusDisplay": "即将出库",
+      "statusName": "已出库",
+      "statusDisplay": "已出库",
       "statusDate": "2026年10月20日",
       "versions": [
         "PS4"
       ],
       "psstore": "https://store.playstation.com/zh-hant-hk/product/UP1014-CUSA09973_00-ASIAESTMOONLOHSE",
-      "color": 3
+      "color": 5
     },
     {
       "recordId": "recvozuy1rxtwr",
