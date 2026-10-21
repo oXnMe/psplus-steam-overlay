@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-20T20:05:21Z",
-  "count": 1593,
+  "updatedAt": "2026-10-21T20:19:11Z",
+  "count": 1592,
   "games": [
     {
       "recordId": "reczz28NLPDp2HOL",
@@ -77,7 +77,7 @@
       "versions": [
         "PS5"
       ],
-      "psstore": "",
+      "psstore": "https://store.playstation.com/zh-hans-hk/product/UP3643-PPSA36332_00-0420289286760563",
       "color": 7
     },
     {
@@ -2217,7 +2217,7 @@
         "PS4",
         "PS5"
       ],
-      "psstore": "https://store.playstation.com/zh-hans-hk/product/UP1004-PPSA03420_00-GTAOSTANDALONE01",
+      "psstore": "https://store.playstation.com/zh-hans-hk/product/UP1004-PPSA03420_00-GTAVCROSSGENBUND",
       "color": 3
     },
     {
@@ -17043,21 +17043,6 @@
       ],
       "psstore": "https://store.playstation.com/zh-hans-hk/product/EP4389-CUSA04462_00-ASIA000000000000",
       "color": 5
-    },
-    {
-      "recordId": "reczz28PUaWShi69",
-      "steamAppId": "609920",
-      "tier": 2,
-      "month": "2022年5月",
-      "monthSort": "2022-05",
-      "statusName": "即将出库",
-      "statusDisplay": "即将出库",
-      "statusDate": "2026年11月17日",
-      "versions": [
-        "PS4"
-      ],
-      "psstore": "https://store.playstation.com/zh-hans-hk/product/UP4395-CUSA11585_00-RACINGAPEX000000",
-      "color": 3
     },
     {
       "recordId": "recv841yeSYm4j",
