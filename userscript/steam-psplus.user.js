@@ -2,7 +2,7 @@
 // @name         Steam × PS Plus 会免游戏显示
 // @icon         https://store.steampowered.com/favicon.ico
 // @namespace    https://github.com/oXnMe/psplus-steam-overlay
-// @version      1.2.0
+// @version      1.2.1
 // @description  在 Steam 显示 PS Plus 会免/入库状态。
 // @author       oXnMe
 // @license      MIT
@@ -128,6 +128,23 @@ const CSS = `
 [id^="searchSuggestions"] .psplus-badge {
   top: calc(50% + 15px);
 }
+#widget .psplus-widget-shot {
+  position: relative;
+  float: left;
+  margin: 2px 10px 10px 0;
+}
+#widget .psplus-widget-shot img.capsule {
+  display: block;
+  float: none;
+  margin: 0;
+}
+#widget .psplus-widget-shot .psplus-badge {
+  top: auto;
+  bottom: 0;
+  left: 0;
+  transform: none;
+  border-radius: 0 3px 0 0;
+}
 `;
 
 function getIdsFromUrl(href) {
@@ -140,6 +157,11 @@ function getIdsFromUrl(href) {
     subId: sub ? sub[1] : null,
     bundleId: bundle ? bundle[1] : null,
   };
+}
+
+function widgetAppId() {
+  const m = /^\/widget\/(\d+)/.exec(location.pathname);
+  return m ? m[1] : null;
 }
 
 function buildMaps(games) {
@@ -397,6 +419,44 @@ const CARD_SELECTOR = [
   '[id^="searchSuggestions"] a[href*="/app/"]',
 ].join(", ");
 
+function stackWidgetBadges(holder) {
+  const badges = Array.prototype.slice.call(holder.querySelectorAll(".psplus-badge"));
+  if (!badges.length) return;
+  const step = badges[0].offsetHeight + 1;
+  const seen = {};
+  let slot = 0;
+  badges.reverse().forEach(function (b) {
+    const m = /PS\+\s*(\d+)/.exec(b.textContent || "");
+    const key = m ? m[1] : b.textContent;
+    if (seen[key]) {
+      b.remove();
+      return;
+    }
+    seen[key] = true;
+    b.style.bottom = slot * step + "px";
+    slot += 1;
+  });
+}
+
+function renderWidgetBadge(appMap) {
+  const appId = widgetAppId();
+  if (!appId) return;
+  const img = document.querySelector("#widget img.capsule");
+  if (!img) return;
+
+  const link = img.closest ? img.closest("a") : null;
+  const target = link || img;
+  let holder = target.parentElement;
+  if (!holder || !holder.classList.contains("psplus-widget-shot")) {
+    holder = document.createElement("div");
+    holder.className = "psplus-widget-shot";
+    target.parentNode.insertBefore(holder, target);
+    holder.appendChild(target);
+  }
+  renderCardBadge(holder, appId, appMap[appId] || []);
+  stackWidgetBadges(holder);
+}
+
 function scanCards(appMap) {
   const pageAppId = getIdsFromUrl().appId;
   document
@@ -449,6 +509,10 @@ function observe(appMap, scanner) {
 
     const maps = buildMaps(data.games);
 
+    if (widgetAppId()) {
+      renderWidgetBadge(maps.app);
+      return;
+    }
     if (/^\/(?:app|sub|bundle)\//.test(location.pathname)) {
       renderStoreBanners(maps.app, maps.sub, maps.bundle);
     }
