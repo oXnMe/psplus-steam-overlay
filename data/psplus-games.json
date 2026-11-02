@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-29T21:20:46Z",
+  "updatedAt": "2026-11-02T23:39:26Z",
   "count": 1595,
   "games": [
     {
@@ -8,15 +8,15 @@
       "tier": 1,
       "month": "2026年11月",
       "monthSort": "2026-11",
-      "statusName": "即将会免",
-      "statusDisplay": "即将会免",
-      "statusDate": "2026年11月3日",
+      "statusName": "领取中",
+      "statusDisplay": "会免领取中",
+      "statusDate": "2026年12月1日",
       "versions": [
         "PS4",
         "PS5"
       ],
       "psstore": "https://store.playstation.com/zh-hans-hk/product/EP4062-PPSA03099_00-DI2MAINSIEEPS500",
-      "color": 2
+      "color": 7
     },
     {
       "recordId": "reczz28SsnbVCJ3P",
@@ -24,15 +24,15 @@
       "tier": 1,
       "month": "2026年11月",
       "monthSort": "2026-11",
-      "statusName": "即将会免",
-      "statusDisplay": "即将会免",
-      "statusDate": "2026年11月3日",
+      "statusName": "领取中",
+      "statusDisplay": "会免领取中",
+      "statusDate": "2026年12月1日",
       "versions": [
         "PS4",
         "PS5"
       ],
       "psstore": "https://store.playstation.com/zh-hans-hk/product/EP1875-PPSA27587_00-0678799933389573",
-      "color": 2
+      "color": 7
     },
     {
       "recordId": "reczz28SsnbVBEcR",
@@ -40,14 +40,14 @@
       "tier": 1,
       "month": "2026年11月",
       "monthSort": "2026-11",
-      "statusName": "即将会免",
-      "statusDisplay": "即将会免",
-      "statusDate": "2026年11月3日",
+      "statusName": "领取中",
+      "statusDisplay": "会免领取中",
+      "statusDate": "2026年12月1日",
       "versions": [
         "PS5"
       ],
       "psstore": "https://store.playstation.com/zh-hans-hk/product/EP8909-PPSA25758_00-0047300101977880",
-      "color": 2
+      "color": 7
     },
     {
       "recordId": "reczz28NLPDp2HOL",
