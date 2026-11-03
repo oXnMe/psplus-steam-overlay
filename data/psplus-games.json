@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-02T23:39:26Z",
-  "count": 1595,
+  "updatedAt": "2026-11-03T21:55:08Z",
+  "count": 1596,
   "games": [
     {
       "recordId": "reczz28SsnbVAu7N",
@@ -47,6 +47,21 @@
         "PS5"
       ],
       "psstore": "https://store.playstation.com/zh-hans-hk/product/EP8909-PPSA25758_00-0047300101977880",
+      "color": 7
+    },
+    {
+      "recordId": "reczz28V8HGiF4OI",
+      "steamAppId": null,
+      "tier": 1,
+      "month": "2026年11月",
+      "monthSort": "2026-11",
+      "statusName": "领取中",
+      "statusDisplay": "会免领取中",
+      "statusDate": "2026年12月1日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "https://store.playstation.com/zh-hans-hk/product/EP0096-CUSA25165_00-0482907501575646",
       "color": 7
     },
     {
@@ -195,14 +210,14 @@
       "tier": 1,
       "month": "2026年10月",
       "monthSort": "2026-10",
-      "statusName": "领取中",
-      "statusDisplay": "会免领取中",
+      "statusName": "截止领取",
+      "statusDisplay": "会免过",
       "statusDate": "2026年11月3日",
       "versions": [
         "PS5"
       ],
       "psstore": "https://store.playstation.com/zh-hans-hk/product/UP0006-PPSA24662_00-F12025PS5GAME000",
-      "color": 7
+      "color": 5
     },
     {
       "recordId": "reczz28I0VZADvix",
@@ -210,14 +225,14 @@
       "tier": 1,
       "month": "2026年10月",
       "monthSort": "2026-10",
-      "statusName": "领取中",
-      "statusDisplay": "会免领取中",
+      "statusName": "截止领取",
+      "statusDisplay": "会免过",
       "statusDate": "2026年11月3日",
       "versions": [
         "PS5"
       ],
       "psstore": "https://store.playstation.com/zh-hans-hk/product/EP4291-PPSA16357_00-0286411811680806",
-      "color": 7
+      "color": 5
     },
     {
       "recordId": "reczz28I0VZAEn3j",
@@ -225,15 +240,15 @@
       "tier": 1,
       "month": "2026年10月",
       "monthSort": "2026-10",
-      "statusName": "领取中",
-      "statusDisplay": "会免领取中",
+      "statusName": "截止领取",
+      "statusDisplay": "会免过",
       "statusDate": "2026年11月3日",
       "versions": [
         "PS4",
         "PS5"
       ],
       "psstore": "https://store.playstation.com/zh-hans-hk/product/HP5846-PPSA19406_00-EDFWORLDBROTHER2",
-      "color": 7
+      "color": 5
     },
     {
       "recordId": "recvuK2foD2NFO",
