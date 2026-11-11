@@ -1,7 +1,162 @@
 {
-  "updatedAt": "2026-11-03T21:55:08Z",
-  "count": 1596,
+  "updatedAt": "2026-11-11T22:56:22Z",
+  "count": 1606,
   "games": [
+    {
+      "recordId": "reczz28YCDVtjsup",
+      "steamAppId": null,
+      "tier": 3,
+      "month": "2026年11月",
+      "monthSort": "2026-11",
+      "statusName": "即将入库",
+      "statusDisplay": "即将入库",
+      "statusDate": "2026年11月17日",
+      "versions": [
+        "PS4",
+        "PS5"
+      ],
+      "psstore": "",
+      "color": 2
+    },
+    {
+      "recordId": "reczz28YC9Dbvfoc",
+      "steamAppId": "3004100",
+      "tier": 3,
+      "month": "2026年11月",
+      "monthSort": "2026-11",
+      "statusName": "即将入库",
+      "statusDisplay": "即将入库",
+      "statusDate": "2026年11月17日",
+      "versions": [
+        "PS4",
+        "PS5"
+      ],
+      "psstore": "https://store.playstation.com/zh-hans-hk/product/JP0700-PPSA23221_00-MAINGAME00000000",
+      "color": 2
+    },
+    {
+      "recordId": "reczz28YC9DbwCnE",
+      "steamAppId": "3280350",
+      "tier": 2,
+      "month": "2026年11月",
+      "monthSort": "2026-11",
+      "statusName": "即将入库",
+      "statusDisplay": "即将入库",
+      "statusDate": "2026年11月17日",
+      "versions": [
+        "PS5"
+      ],
+      "psstore": "https://store.playstation.com/zh-hans-hk/product/JP9000-PPSA02015_00-DS2OTB0000000001",
+      "color": 2
+    },
+    {
+      "recordId": "reczz28YC9Dbwxd3",
+      "steamAppId": "3061810",
+      "tier": 2,
+      "month": "2026年11月",
+      "monthSort": "2026-11",
+      "statusName": "即将入库",
+      "statusDisplay": "即将入库",
+      "statusDate": "2026年11月17日",
+      "versions": [
+        "PS4",
+        "PS5"
+      ],
+      "psstore": "https://store.playstation.com/zh-hans-hk/product/JP0177-PPSA24478_00-MAINGAME00000000",
+      "color": 2
+    },
+    {
+      "recordId": "reczz28YC9DbveLX",
+      "steamAppId": "801800",
+      "tier": 2,
+      "month": "2026年11月",
+      "monthSort": "2026-11",
+      "statusName": "即将入库",
+      "statusDisplay": "即将入库",
+      "statusDate": "2026年11月17日",
+      "versions": [
+        "PS4",
+        "PS5"
+      ],
+      "psstore": "https://store.playstation.com/zh-hans-hk/product/UP4363-PPSA15493_00-ATOMFALLDLCCOMP0",
+      "color": 2
+    },
+    {
+      "recordId": "reczz28YC9DbyIEN",
+      "steamAppId": "2701660",
+      "tier": 2,
+      "month": "2026年11月",
+      "monthSort": "2026-11",
+      "statusName": "即将入库",
+      "statusDisplay": "即将入库",
+      "statusDate": "2026年11月17日",
+      "versions": [
+        "PS5"
+      ],
+      "psstore": "https://store.playstation.com/zh-hans-hk/product/HP0082-PPSA20614_00-000000000000ASIA",
+      "color": 2
+    },
+    {
+      "recordId": "reczz28YC9DbwPGz",
+      "steamAppId": "1164940",
+      "tier": 2,
+      "month": "2026年11月",
+      "monthSort": "2026-11",
+      "statusName": "即将入库",
+      "statusDisplay": "即将入库",
+      "statusDate": "2026年11月17日",
+      "versions": [
+        "PS5"
+      ],
+      "psstore": "https://store.playstation.com/zh-hans-hk/product/EP4064-PPSA15349_00-TREPANG200000000",
+      "color": 2
+    },
+    {
+      "recordId": "reczz28YC9DbvXzX",
+      "steamAppId": "3875050",
+      "tier": 2,
+      "month": "2026年11月",
+      "monthSort": "2026-11",
+      "statusName": "即将入库",
+      "statusDisplay": "即将入库",
+      "statusDate": "2026年11月17日",
+      "versions": [
+        "PS5"
+      ],
+      "psstore": "https://store.playstation.com/zh-hans-hk/product/EP4356-PPSA32557_00-MOTOGP26FULLGAME",
+      "color": 2
+    },
+    {
+      "recordId": "reczz28YC9DbwDvl",
+      "steamAppId": "686810",
+      "tier": 2,
+      "month": "2026年11月",
+      "monthSort": "2026-11",
+      "statusName": "即将入库",
+      "statusDisplay": "即将入库",
+      "statusDate": "2026年11月17日",
+      "versions": [
+        "PS5"
+      ],
+      "psstore": "https://store.playstation.com/zh-hans-hk/product/HP4064-PPSA05035_00-5593710445455922",
+      "color": 2
+    },
+    {
+      "recordId": "reczz28YCDVtdl5u",
+      "steamAppId": "3468650",
+      "tier": 2,
+      "month": "2026年11月",
+      "monthSort": "2026-11",
+      "statusName": "即将入库",
+      "statusDisplay": "即将入库",
+      "statusDate": "2026年11月17日",
+      "versions": [
+        "PS4",
+        "PS5"
+      ],
+      "psstore": "https://store.playstation.com/zh-hans-hk/product/EP6665-PPSA28053_00-C260000000000000",
+      "color": 2
+    },
     {
       "recordId": "reczz28SsnbVAu7N",
       "steamAppId": "934700",
