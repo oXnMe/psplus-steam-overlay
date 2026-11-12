@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-11-11T22:56:22Z",
+  "updatedAt": "2026-11-12T22:24:31Z",
   "count": 1606,
   "games": [
     {
       "recordId": "reczz28YCDVtjsup",
-      "steamAppId": null,
+      "steamAppId": "224940",
       "tier": 3,
       "month": "2026年11月",
       "monthSort": "2026-11",
@@ -206,7 +206,7 @@
     },
     {
       "recordId": "reczz28V8HGiF4OI",
-      "steamAppId": null,
+      "steamAppId": "859570",
       "tier": 1,
       "month": "2026年11月",
       "monthSort": "2026-11",
