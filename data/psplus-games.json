@@ -1,7 +1,54 @@
 {
-  "updatedAt": "2026-11-17T23:36:52Z",
-  "count": 1606,
+  "updatedAt": "2026-11-26T00:36:59Z",
+  "count": 1609,
   "games": [
+    {
+      "recordId": "reczz28dyrdjfS5f",
+      "steamAppId": null,
+      "tier": 1,
+      "month": "2026年12月",
+      "monthSort": "2026-12",
+      "statusName": "即将会免",
+      "statusDisplay": "即将会免",
+      "statusDate": "2026年12月1日",
+      "versions": [
+        "PS4",
+        "PS5"
+      ],
+      "psstore": "https://store.playstation.com/zh-hans-hk/product/UP0002-PPSA18010_00-TH34RSTNDBUNDL01",
+      "color": 2
+    },
+    {
+      "recordId": "reczz28dyrdjfjiG",
+      "steamAppId": "454650",
+      "tier": 1,
+      "month": "2026年12月",
+      "monthSort": "2026-12",
+      "statusName": "即将会免",
+      "statusDisplay": "即将会免",
+      "statusDate": "2026年12月1日",
+      "versions": [
+        "PS4",
+        "PS5"
+      ],
+      "psstore": "https://store.playstation.com/zh-hans-hk/product/HP0700-PPSA08585_00-DRAGONBALLXV2002",
+      "color": 2
+    },
+    {
+      "recordId": "reczz28dyrdjgxuk",
+      "steamAppId": "1944430",
+      "tier": 1,
+      "month": "2026年12月",
+      "monthSort": "2026-12",
+      "statusName": "即将会免",
+      "statusDisplay": "即将会免",
+      "statusDate": "2026年12月1日",
+      "versions": [
+        "PS4"
+      ],
+      "psstore": "",
+      "color": 2
+    },
     {
       "recordId": "reczz28YCDVtjsup",
       "steamAppId": "224940",
