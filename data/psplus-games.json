@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-11-26T00:36:59Z",
-  "count": 1609,
+  "updatedAt": "2026-11-27T00:44:55Z",
+  "count": 1610,
   "games": [
     {
       "recordId": "reczz28dyrdjfS5f",
-      "steamAppId": null,
+      "steamAppId": "2545710",
       "tier": 1,
       "month": "2026年12月",
       "monthSort": "2026-12",
@@ -32,6 +32,22 @@
         "PS5"
       ],
       "psstore": "https://store.playstation.com/zh-hans-hk/product/HP0700-PPSA08585_00-DRAGONBALLXV2002",
+      "color": 2
+    },
+    {
+      "recordId": "reczz28eEq49ccCA",
+      "steamAppId": "521890",
+      "tier": 1,
+      "month": "2026年12月",
+      "monthSort": "2026-12",
+      "statusName": "即将会免",
+      "statusDisplay": "即将会免",
+      "statusDate": "2026年12月1日",
+      "versions": [
+        "PS4",
+        "PS5"
+      ],
+      "psstore": "https://store.playstation.com/zh-hans-hk/product/EP0096-PPSA35154_00-HNREMASTERED0000",
       "color": 2
     },
     {
